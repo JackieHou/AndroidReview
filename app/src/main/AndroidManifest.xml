@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qwm.androidreview">
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 电话 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+
+    <!-- 短信 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- lable 表示Activity的标题 -->
+        <activity
+            android:name="com.qwm.androidreview.activitydemo.Test01Activity"
+            android:label="OtherActivity" />
+        <activity
+            android:name="com.qwm.androidreview.activitydemo.DialogActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name="com.qwm.androidreview.activitydemo.Test02Activity" />
+
+        <!-- ===============================广播接收者 测试-================================================================ -->
+        <!-- 广播接收者 测试 -->
+        <activity
+            android:name="com.qwm.androidreview.receiverdemo.ReceiverActivity"
+            android:label="广播接收者测试" />
+
+        <receiver android:name="com.qwm.androidreview.receiverdemo.TestReceiver">
+            <intent-filter>
+                <action android:name="com.qwm.test" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.qwm.androidreview.receiverdemo.PhoneReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+
+        <!-- ===============================内容提供者 测试-================================================================ -->
+        <provider
+            android:name="com.qwm.androidreview.providerdemo.PersonProvider"
+            android:authorities="com.qwm.person" />
+
+        <activity android:name="com.qwm.androidreview.providerdemo.ProviderActivity" />
+
+        <!-- ===============================Service 测试-================================================================ -->
+        <activity android:name="com.qwm.androidreview.servicedemo.ServiceActivity" />
+
+        <service android:name="com.qwm.androidreview.servicedemo.MyService" />
+        <service android:name="com.qwm.androidreview.servicedemo.AIDLService">
+            <intent-filter>
+                <action android:name="com.qwm.aidl" />
+            </intent-filter>
+        </service>
+
+        <activity android:name="com.qwm.androidreview.listviewdemo.ListViewActivity" />
+        <activity android:name="com.qwm.androidreview.referencedemo.ReferenceActivity" />
+        <activity android:name="com.qwm.androidreview.pictureoomdemo.PictureOOMActivity"></activity>
+    </application>
+
+</manifest>
