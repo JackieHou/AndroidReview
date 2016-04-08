@@ -27,25 +27,25 @@
 
         <!-- lable 表示Activity的标题 -->
         <activity
-            android:name="com.qwm.androidreview.activitydemo.Test01Activity"
+            android:name=".activitydemo.Test01Activity"
             android:label="OtherActivity" />
         <activity
-            android:name="com.qwm.androidreview.activitydemo.DialogActivity"
+            android:name=".activitydemo.DialogActivity"
             android:theme="@android:style/Theme.Dialog" />
-        <activity android:name="com.qwm.androidreview.activitydemo.Test02Activity" />
+        <activity android:name=".activitydemo.Test02Activity" />
 
         <!-- ===============================广播接收者 测试-================================================================ -->
         <!-- 广播接收者 测试 -->
         <activity
-            android:name="com.qwm.androidreview.receiverdemo.ReceiverActivity"
+            android:name=".receiverdemo.ReceiverActivity"
             android:label="广播接收者测试" />
 
-        <receiver android:name="com.qwm.androidreview.receiverdemo.TestReceiver">
+        <receiver android:name=".receiverdemo.TestReceiver">
             <intent-filter>
                 <action android:name="com.qwm.test" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.qwm.androidreview.receiverdemo.PhoneReceiver">
+        <receiver android:name=".receiverdemo.PhoneReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.PHONE_STATE" />
                 <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
@@ -54,24 +54,28 @@
 
         <!-- ===============================内容提供者 测试-================================================================ -->
         <provider
-            android:name="com.qwm.androidreview.providerdemo.PersonProvider"
+            android:name=".providerdemo.PersonProvider"
             android:authorities="com.qwm.person" />
 
-        <activity android:name="com.qwm.androidreview.providerdemo.ProviderActivity" />
+        <activity android:name=".providerdemo.ProviderActivity"  android:label="内容提供者测试"/>
 
         <!-- ===============================Service 测试-================================================================ -->
-        <activity android:name="com.qwm.androidreview.servicedemo.ServiceActivity" />
+        <activity android:name=".servicedemo.ServiceActivity" android:label="Service测试" />
 
-        <service android:name="com.qwm.androidreview.servicedemo.MyService" />
-        <service android:name="com.qwm.androidreview.servicedemo.AIDLService">
+        <service android:name=".servicedemo.MyService" />
+        <service android:name=".servicedemo.AIDLService">
             <intent-filter>
                 <action android:name="com.qwm.aidl" />
             </intent-filter>
         </service>
 
-        <activity android:name="com.qwm.androidreview.listviewdemo.ListViewActivity" />
-        <activity android:name="com.qwm.androidreview.referencedemo.ReferenceActivity" />
-        <activity android:name="com.qwm.androidreview.pictureoomdemo.PictureOOMActivity"></activity>
+        <activity android:name=".listviewdemo.ListViewActivity"  android:label="ListViewActivity"/>
+        <activity android:name=".referencedemo.ReferenceActivity" android:label="ReferenceActivity"/>
+        <activity android:name=".pictureoomdemo.PictureOOMActivity" android:label="PictureOOMActivity"/>
+        <activity android:name=".AnimoDemo.AnimoActivity" android:label="AnimoActivity"/>
+        <activity android:name=".AnimoDemo.TweenAnimActivity" android:label="TweenAnimActivity"/>
+        <activity android:name=".AnimoDemo.PropertyAnimActivity" android:label="PropertyAnimActivity"/>
+        <activity android:name=".AnimoDemo.FrameAnimActivity" android:label="FrameAnimActivity"/>
     </application>
 
 </manifest>

@@ -1,9 +1,11 @@
 package com.qwm.androidreview.activitydemo;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 
 import com.qwm.androidreview.R;

@@ -1,10 +1,10 @@
 package com.qwm.androidreview.activitydemo;
 
 import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.qwm.androidreview.R;
-
 
 public class DialogActivity extends Activity {
 

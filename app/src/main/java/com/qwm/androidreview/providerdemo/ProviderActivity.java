@@ -1,9 +1,12 @@
 package com.qwm.androidreview.providerdemo;
 
+import android.content.ContentProvider;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import android.provider.Telephony;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +14,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.qwm.androidreview.R;
+import com.qwm.androidreview.sqldemo.MyOpenHelper;
+
+import java.util.List;
 
 /** @author qiwenming
  * @date 2016/3/29 16:46

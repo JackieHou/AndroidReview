@@ -1,0 +1,192 @@
+Android 进程和线程
+  --进程是被系统创建的，但内存不足的时候，又会被系统回收。
+  --进程的级别
+    --Foreground process
+    --Visible process
+    --Service process
+    --Background process
+    --Empty process
+
+  --进程回收
+    -- 5---1
+    -- 先回收一个，够了就不再回收
+    -- 特殊回收 3 2 1三种进程
+       内存不够，回收三种进程，内存够了，会自动重启
+       如果用户手动关了服务，服务不会再重启
+
+
+Android 四大主件
+  --Activty
+  --BroadcastReceiver
+  --ContentProvider
+  --Service
+
+  --Activity
+   --启动模式
+       --Standard
+       --SingleTop
+       --SingleTask
+       --SingleInstance
+   --生命周期
+       -- OnCreate  OnStart  OnResume  OnPause  OnStop  OnDestory  OnReStart
+   --能够传递的类型
+       --8种基本数据类型（byte short int long  float double boolean char ）
+       --List<String>
+       --Bundle
+       --Serilizable
+  --BroadcastReceiver
+       --广播的分类
+         --普通广播 不可中断、不能相互传递数据
+         --有序广播 abortBroadcast
+       --广播的定义
+         --定义类继承BroadcastReceiver 重写 onReceive
+         --清单文件或者代码中注册广播
+         --有序广播接收顺序可以使用 priority来设置，默认0，值越大优先级越高
+       --注意
+          如果要在广播接收者中打开Activity，需要设置一下Intent.FLAG_ACTIVITY_NEW_TASK，因为广播接收者是没有Activity任务栈的
+  --ContentProvider
+        --数据对外共享 数据访问同一  只暴露我们希望提供的数据   数据更改监听
+        --创建内容提供者
+          --定义类继承 ContentProvider
+          --清单文件配置(name  authorities)
+        --短信的内容提供者 content://sms
+  --Service
+        --后台运行
+        --startService():  onCreate() onStartCommand()       onDestory()
+        --bindService() :  onCreate() onBind()   onUnbind()  onDestory()
+        --AIDL
+          --IPC(inter process communication)
+          --原理：AIDL （Android Interface Definition Language）
+          --步骤：
+             --创建.aidl文件，声明方法
+             --创建Service内部类，继承自 Stub
+             --返回上面的对象
+             --客户端导入上面的.aidl
+             --使用隐式意图
+              Intent intent = new Intent("com.qwm.aidl");
+
+Handler
+  原理：
+     Looper.prepare()
+     new Handler()
+        -- Looper
+        ---MessageQueue
+     Looper.loop();
+
+
+    ---sendMessage(msg)
+    --->sendMessageDelayed(msg,0)
+    --->sendMessageAtTime(msg,uptimeMills)
+    --->enqueueMessage(queue,msg,uptimeMills)  msg.target = this;
+    --->queue.enqueueMessage(msg,uptimeMills)  排序
+
+    ---loop()
+    --->dispatchMessage(msg)    msg.target.dispatchMessage;
+    --->handlerMessage(msg)
+AsyncTask
+    AsyncTask()
+       mWorker
+          call()  ----- doInBackground()
+      mFuture
+          done()  ------->handler---> onPostExecute()
+
+    ----execute(params...);
+    ---->prepare()
+    ---->exec.execute(mFuture); //执行任务
+
+ListView优化
+   复用coverView
+       ViewHolder
+   分页加载
+       int position = contentLv.getLastVisiblePosition();
+   复杂的item处理
+
+   图片优化
+   其他优化
+      BaseAdapter尽量避免使用 static
+      尽量使用getApplicationContext()
+      尽量避免在Adapter总使用线程
+
+引用的了解
+   android
+        Intent.ACTION_DEVICE_STORAGE_LOW;
+        设备内存不足时发出的广播,此广播只能由系统使用，其它APP不可用；
+        Intent.ACTION_DEVICE_STORAGE_OK;
+        设备内存从不足到充足时发出的广播,此广播只能由系统使用，其它APP不可用；
+   对象的引用级别（jdk1.2开始）
+      强引用、软引用、弱引用、虚引用
+        --强引用(StrongReference)
+            Object object = new Object();
+            不会回收：
+        --软引用（SoftReference）
+           Object object = new Object();
+           SoftReference sr = new SoftReference(object);
+           内存不足的时候回收，回收搜 get()=null
+           get()获取强引用
+        --弱引用（WeakReference）
+           生命周期更短
+           垃圾回收器一旦发现弱引用，就回收（不论内存够不够）
+        --虚引用（PhantomReference）
+           形同虚设
+           任何时候都可被回收
+           特点：
+               a.形同虚设；
+               b.可用来跟踪对象被垃圾回收器回收的活动；
+               c.虚引用与软引用和弱引用的一个区别在于：
+               虚引用必须和引用队列 （ReferenceQueue）联合使用，
+               当垃圾回收器准备回收一个对象时，如果发现它还有虚引用，就会在回收对象的内存之前，把这个虚引用加入到与之关联的引用队列中；
+        http://sishuok.com/forum/blogPost/list/342.html
+
+图片缓存
+     压缩图片   BitmapFactory.Option()    options.inJustDecodeBounds = true;
+     图片缓存技术
+         LruCache
+               (LRU  Least Recently Used 近期最少使用) v4
+               最近使用的对象强引用村存储在 LinkedHashMap中，最近很少使用达到峰值的对象移除LinkedHashMap
+               LruCache原理
+                    trimToSize(maxSize) 不断的计算，直到存储的大小小于总的大小
+         三级缓存
+              内存  本地缓存  服务器   304(未修改过)
+
+OOM异常的处理
+     产生的原因
+           1.资源释放问题
+           2.对象内存过大问题
+           3.static
+              解决方法：
+                  1.static尽量不要修饰资源耗费过多的示例
+                  2.Context尽量使用ApplicationContext
+                  3.WeakReference代替强引用
+           4.线程导致内存异常
+
+     避免OOM的方案
+          1.图片过大解决方案
+               1.图片压缩并且及时回收（bitmap.recycle()）
+               2.软引用并且及时回收
+          2.复用ListView
+          3.界面切换
+              单个界面横竖屏N
+                   1.去除xml中设置的背景，改为程序中设置
+                   2.xml加载到一个容器中，使用的时候直接调用，避免重复加载
+               少重复使用一些代码
+      常见的内存使用不当的情况
+          1.查询数据库的时候，没有关闭游标
+          2.构造Adapter的时候，没有使用缓存的convertView
+          3.Bitmap对象不再使用时，没有调用recycle()释放内存
+          4.对象的引用没有释放
+          5.其他
+
+      Android性能优化的一些方案
+         1.敏感计算方面用NDK完成
+         2.图形优化(recycle())
+         3.gif的处理
+       图片占用进程的内存算法简介
+         width * height * config
+       内存监测工具 DDMS --> Heap
+
+动画
+   帧动画
+
+   补间动画
+   属性动画
+
