@@ -177,16 +177,22 @@ OOM异常的处理
           5.其他
 
       Android性能优化的一些方案
-         1.敏感计算方面用NDK完成
-         2.图形优化(recycle())
-         3.gif的处理
+          1.敏感计算方面用NDK完成
+          2.图形优化(recycle())
+          3.gif的处理
        图片占用进程的内存算法简介
-         width * height * config
+          width * height * config
        内存监测工具 DDMS --> Heap
 
 动画
    帧动画
-
+      所有的动画组合起来
    补间动画
-   属性动画
-
+      位移、旋转、缩放、透明度
+   属性动画 3.0
+       blog
+         Android属性动画完全解析(上)，初识属性动画的基本用法                     http://blog.csdn.net/guolin_blog/article/details/43536355
+         Android属性动画完全解析(中)，ValueAnimator和ObjectAnimator的高级用法
+         Android属性动画完全解析(下)，Interpolator和ViewPropertyAnimator的用法
+       ValueAnimator
+       ObjectAnimator
