@@ -96,10 +96,10 @@ public class ScreenActivity extends AppCompatActivity {
      * @return
      */
     public int dip2px(float dip){
-        return (int)(dip*density);
+        return (int)(dip*density+0.5f);
     }
 
     public int px2dip(float px){
-      return (int)(px/density);
+      return (int)(px/density+0.5f);
     }
 }
