@@ -1,4 +1,4 @@
-package com.qwm.androidreview.AnimoDemo;
+package com.qwm.androidreview.animodemo;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

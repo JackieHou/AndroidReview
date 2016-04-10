@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="#FF00FF"/><!--填充-->
+
+    <gradient android:type="radial"
+        android:angle="0"
+        android:gradientRadius="100"
+        android:startColor="#ff00ff"
+        android:endColor="#0f0f0f"/> <!--渐变-->
+
+    <corners android:radius="10dp"/> <!--圆角-->
+
+    <size android:height="100dp"
+        android:width="100dp"/> <!--大小-->
+
+    <stroke android:width="1dp"
+        android:color="#0ff00f"
+        android:dashGap="2dp"
+        android:dashWidth="2dp"
+       />
+</shape>

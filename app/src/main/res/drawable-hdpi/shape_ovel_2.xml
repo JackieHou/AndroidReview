@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:shape="oval">
+    <size android:width="60dp" android:height="30dp"/>
+    <!-- 设置渐变色 -->
+    <gradient android:startColor="#00f" android:centerColor="#0f0" android:endColor="#f00"></gradient>
+</shape>

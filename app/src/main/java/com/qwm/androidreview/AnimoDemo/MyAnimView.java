@@ -1,4 +1,4 @@
-package com.qwm.androidreview.AnimoDemo;
+package com.qwm.androidreview.animodemo;
 
 import android.animation.ValueAnimator;
 import android.content.Context;

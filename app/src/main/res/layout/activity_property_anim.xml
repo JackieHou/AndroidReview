@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.qwm.androidreview.AnimoDemo.PropertyAnimActivity">
+    tools:context="com.qwm.androidreview.animodemo.PropertyAnimActivity">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -30,7 +30,7 @@
             android:text="qiwenmingshiwo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-        <com.qwm.androidreview.AnimoDemo.MyAnimView
+        <com.qwm.androidreview.animodemo.MyAnimView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>

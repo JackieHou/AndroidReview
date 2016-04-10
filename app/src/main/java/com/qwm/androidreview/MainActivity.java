@@ -7,11 +7,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
-import android.widget.SimpleAdapter;
 
-import com.qwm.androidreview.AnimoDemo.AnimoActivity;
+import com.qwm.androidreview.animodemo.AnimoActivity;
 import com.qwm.androidreview.activitydemo.Test01Activity;
 import com.qwm.androidreview.adapter.MyGridAdapter;
 import com.qwm.androidreview.listviewdemo.ListViewActivity;
@@ -19,6 +16,7 @@ import com.qwm.androidreview.pictureoomdemo.PictureOOMActivity;
 import com.qwm.androidreview.providerdemo.ProviderActivity;
 import com.qwm.androidreview.receiverdemo.ReceiverActivity;
 import com.qwm.androidreview.servicedemo.ServiceActivity;
+import com.qwm.androidreview.shapedemo.ShapeDemoActivity;
 import com.qwm.androidreview.view.MyGridView;
 
 import java.util.ArrayList;
@@ -47,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         itemList.add("ListView测试");
         itemList.add("图片OOM测试");
         itemList.add("动画测试");
+        itemList.add("Shape测试");
         contentMgv.setAdapter(new MyGridAdapter(this, itemList));
         contentMgv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -66,6 +65,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, PictureOOMActivity.class));
                 } else if ("动画测试".equals(itemStr)) {
                     startActivity(new Intent(MainActivity.this, AnimoActivity.class));
+                } else if ("Shape测试".equals(itemStr)) {
+                    startActivity(new Intent(MainActivity.this, ShapeDemoActivity.class));
                 }
             }
         });

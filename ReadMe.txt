@@ -196,3 +196,11 @@ OOM异常的处理
          Android属性动画完全解析(下)，Interpolator和ViewPropertyAnimator的用法
        ValueAnimator
        ObjectAnimator
+
+Shape的使用
+   corners ---------圆角
+   size    ---------大小
+   padding ---------内边距
+                         solid   ---------填充
+                         stroke  ---------描边
+                         gradient---------渐变

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" 
+    >
+
+    <size android:width="60dp" android:height="30dp"/>
+    <!-- 设置描边色 -->
+    <stroke android:width="2dp" android:color="#f00" android:dashWidth="5dp" android:dashGap="5dp"></stroke>
+    
+    <corners android:radius="15dp"/>
+</shape>

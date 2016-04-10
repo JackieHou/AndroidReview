@@ -1,4 +1,4 @@
-package com.qwm.androidreview.AnimoDemo;
+package com.qwm.androidreview.animodemo;
 /** @author qiwenming
  * @date 2016/4/8 16:02
  * @ClassName: Point

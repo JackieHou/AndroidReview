@@ -1,10 +1,8 @@
-package com.qwm.androidreview.AnimoDemo;
+package com.qwm.androidreview.animodemo;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
-import android.animation.FloatEvaluator;
 import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;

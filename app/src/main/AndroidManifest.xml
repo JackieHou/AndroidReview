@@ -57,10 +57,14 @@
             android:name=".providerdemo.PersonProvider"
             android:authorities="com.qwm.person" />
 
-        <activity android:name=".providerdemo.ProviderActivity"  android:label="内容提供者测试"/>
+        <activity
+            android:name=".providerdemo.ProviderActivity"
+            android:label="内容提供者测试" />
 
         <!-- ===============================Service 测试-================================================================ -->
-        <activity android:name=".servicedemo.ServiceActivity" android:label="Service测试" />
+        <activity
+            android:name=".servicedemo.ServiceActivity"
+            android:label="Service测试" />
 
         <service android:name=".servicedemo.MyService" />
         <service android:name=".servicedemo.AIDLService">
@@ -69,13 +73,29 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".listviewdemo.ListViewActivity"  android:label="ListViewActivity"/>
-        <activity android:name=".referencedemo.ReferenceActivity" android:label="ReferenceActivity"/>
-        <activity android:name=".pictureoomdemo.PictureOOMActivity" android:label="PictureOOMActivity"/>
-        <activity android:name=".AnimoDemo.AnimoActivity" android:label="AnimoActivity"/>
-        <activity android:name=".AnimoDemo.TweenAnimActivity" android:label="TweenAnimActivity"/>
-        <activity android:name=".AnimoDemo.PropertyAnimActivity" android:label="PropertyAnimActivity"/>
-        <activity android:name=".AnimoDemo.FrameAnimActivity" android:label="FrameAnimActivity"/>
+        <activity
+            android:name=".listviewdemo.ListViewActivity"
+            android:label="ListViewActivity" />
+        <activity
+            android:name=".referencedemo.ReferenceActivity"
+            android:label="ReferenceActivity" />
+        <activity
+            android:name=".pictureoomdemo.PictureOOMActivity"
+            android:label="PictureOOMActivity" />
+        <activity
+            android:name=".animodemo.AnimoActivity"
+            android:label="AnimoActivity" />
+        <activity
+            android:name=".animodemo.TweenAnimActivity"
+            android:label="TweenAnimActivity" />
+        <activity
+            android:name=".animodemo.PropertyAnimActivity"
+            android:label="PropertyAnimActivity" />
+        <activity
+            android:name=".animodemo.FrameAnimActivity"
+            android:label="FrameAnimActivity" />
+        <activity android:name=".shapedemo.ShapeDemoActivity"
+            android:label="ShapeDemoActivity"/>
     </application>
 
 </manifest>

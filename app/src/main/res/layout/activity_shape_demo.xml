@@ -8,24 +8,17 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.qwm.androidreview.animodemo.AnimoActivity">
+    tools:context="com.qwm.androidreview.shapedemo.ShapeDemoActivity">
 
     <Button
-        android:text="帧动画(FrameAnimation)"
-        android:onClick="toFrameAnimation"
-        android:textAllCaps="false"
+        android:text="测试1"
+        android:background="@drawable/shape_test1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
     <Button
-        android:text="补间动画(TweenAnimation)"
-        android:onClick="toTweenAnimation"
-        android:textAllCaps="false"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <Button
-        android:text="属性动画(FrameAnimation)"
-        android:onClick="toPropertyAnimation"
-        android:textAllCaps="false"
+        android:text="按钮"
+        android:background="@drawable/shape_test3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
