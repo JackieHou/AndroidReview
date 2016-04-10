@@ -201,6 +201,25 @@ Shape的使用
    corners ---------圆角
    size    ---------大小
    padding ---------内边距
-                         solid   ---------填充
-                         stroke  ---------描边
-                         gradient---------渐变
+   solid   ---------填充
+   stroke  ---------描边
+   gradient---------渐变
+
+屏幕适配
+   横竖屏
+         onConfigurationChanged
+         3.2以前
+          android:configChanges="orientation|keyboardHidden"
+         3.2以后screenSize
+          android:configChanges="keyboardHidden|orientation|screenSize"
+          或者
+          android:configChanges="orientation|screenSize"
+   分辨率的问题
+      使用layout_weight
+      清单文件配置（不同屏幕写不同的布局）
+      其他（使用dp等）
+   px和dp的关系
+      px = dp*PPI/160
+      dp = px / (PPI/ 160)
+
+

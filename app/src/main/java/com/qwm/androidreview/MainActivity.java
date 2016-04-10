@@ -15,6 +15,7 @@ import com.qwm.androidreview.listviewdemo.ListViewActivity;
 import com.qwm.androidreview.pictureoomdemo.PictureOOMActivity;
 import com.qwm.androidreview.providerdemo.ProviderActivity;
 import com.qwm.androidreview.receiverdemo.ReceiverActivity;
+import com.qwm.androidreview.screendemo.ScreenActivity;
 import com.qwm.androidreview.servicedemo.ServiceActivity;
 import com.qwm.androidreview.shapedemo.ShapeDemoActivity;
 import com.qwm.androidreview.view.MyGridView;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         itemList.add("图片OOM测试");
         itemList.add("动画测试");
         itemList.add("Shape测试");
+        itemList.add("屏幕适配");
         contentMgv.setAdapter(new MyGridAdapter(this, itemList));
         contentMgv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -67,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, AnimoActivity.class));
                 } else if ("Shape测试".equals(itemStr)) {
                     startActivity(new Intent(MainActivity.this, ShapeDemoActivity.class));
+                } else if ("屏幕适配".equals(itemStr)) {
+                    startActivity(new Intent(MainActivity.this, ScreenActivity.class));
                 }
             }
         });

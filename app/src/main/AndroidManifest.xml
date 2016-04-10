@@ -94,8 +94,13 @@
         <activity
             android:name=".animodemo.FrameAnimActivity"
             android:label="FrameAnimActivity" />
-        <activity android:name=".shapedemo.ShapeDemoActivity"
-            android:label="ShapeDemoActivity"/>
+        <activity
+            android:name=".shapedemo.ShapeDemoActivity"
+            android:label="ShapeDemoActivity" />
+        <activity
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:name=".screendemo.ScreenActivity"
+            android:label="ScreenActivity"></activity>
     </application>
 
 </manifest>
