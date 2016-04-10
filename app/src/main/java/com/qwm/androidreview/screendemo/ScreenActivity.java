@@ -21,7 +21,7 @@ import com.qwm.androidreview.R;
 public class ScreenActivity extends AppCompatActivity {
     private String TAG = ScreenActivity.class.getName();
     private TextView contentTv;
-    private float density = getResources().getDisplayMetrics().density;
+    private float density = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,7 @@ public class ScreenActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        density = getResources().getDisplayMetrics().density;
         Log.i(TAG, "onResume: ------------");
     }
 
