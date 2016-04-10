@@ -34,7 +34,6 @@ public class ScreenActivity extends AppCompatActivity {
         }else if(orientation==Configuration.ORIENTATION_PORTRAIT){
             contentTv.setText("现在是竖屏");
         }
-        Toast.makeText(ScreenActivity.this, "density:"+density, Toast.LENGTH_SHORT).show();
         Log.i(TAG, "onCreate: ------");
     }
 
@@ -88,6 +87,7 @@ public class ScreenActivity extends AppCompatActivity {
         String str = "density="+density+"\r\n" +
                value + "px = " + dp + "dp\r\n"+
                value + "dp = " + px + "px\r\n";
+        Toast.makeText(ScreenActivity.this, str, Toast.LENGTH_LONG).show();
     }
 
     /**
