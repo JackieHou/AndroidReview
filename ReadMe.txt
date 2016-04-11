@@ -222,4 +222,37 @@ Shape的使用
       px = dp*PPI/160
       dp = px / (PPI/ 160)
 
+qq三方登陆
+   授权--->code-->token-->openid-->信息
 
+Android底层
+   1. Linux kernel
+   2. Libraries   Application Runtime (Core Libraries ,Dalvik Virtrul Machine)
+   3. Application Framework
+   4. Application
+
+   Linux kernel
+      Linux内核与驱动
+   Libraries
+      动态库、android运行库、dvm   -------> c c++
+   Application Framework
+      java
+   Application
+      java
+
+   Dalvik VM与JVM（java Virtual Machine）
+     JVM：  .java--> 编译为 .class -->打包为 .jar
+     DVM:   .java--> 编译为 .class -->打包为 .dex --->打包为 .apk （通过dx工具）
+
+   Davik VM 与 ART VM
+     Davik 实时编译
+     ART  安装时编译
+    http://blog.csdn.net/zengmingen/article/details/49513505
+
+
+    JVM  .java  .class  .jar
+    DVM  .java  .class  .dex  .apk
+
+
+   系统启动过程
+     init --rc--- 服务启动
