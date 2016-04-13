@@ -255,4 +255,24 @@ Android底层
 
 
    系统启动过程
-     init --rc--- 服务启动
+        Linux init
+        init.rc (配置，启动守护进程)
+
+        1. app_main.cpp
+           set_process_name("zygote");
+           runtime.start("com.android.internal.os.ZygoteInit",startSystemServer);
+
+        2. AndroidRuntime.start
+            startVM
+            startReg---注册JNI
+            ZygoteInitl.main
+
+        3. ZygoteInit.main
+             registerZygoteSocket();   创建socket用于和ActivityManagerService通信
+             startSystemServer();  启动SystemeServer组件
+             runSelectLoopMode   进入无限循环 等待ActivityManagerService请求创建应用进程
+
+        4. ZygoteInit.registerZygoteSocket()
+             zygote   根据文件描述符
+
+
