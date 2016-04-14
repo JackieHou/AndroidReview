@@ -460,3 +460,16 @@ Android底层
                6. Draw decorations(装饰) (scrollbars for instance)
 
 
+
+        	视图状态
+        		  enabled
+        		  focused
+        		  window_focused
+        		  selected
+        		  pressed
+        		  视图改变的时候会调用
+        		     drawableStateChanged()
+        			    getDrawableState()
+        				drawable.setState();
+        				   onStateChange();
+        		            这里会先调用indexOfStateSet()方法来找到当前视图状态所对应的Drawable资源下标，然后在调用selectDrawable()方法并将下标传入，在这个方法中就会将视图的背景图设置为当前视图状态所对应的资源了。
