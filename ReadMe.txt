@@ -276,3 +276,25 @@ Android底层
              zygote   根据文件描述符
 
 
+    应用启动过程
+         PackageManagerService  读取所有的mainfest，添加到信息库中
+              1) system/app  system/framework  data/app data/app-private
+
+              2)权限分配
+
+              3)保存数据
+      	         将每个apk的信息保存到packages.xm和packages.list中
+         Launcher
+            1)通过Binder进入到ActivityManagerService进程 ---调用--->ActivityManagerService.startActivity
+
+      	    2)ActivityManagerService调用ActivityStack.startActivityMayWait准备启动的activity信息
+
+      	    3)ActivityStack通知ApplicationThread要进行Activity启动调度了（ApplicationThread代表的是调用ActivityManagerService.startActivity接口的进程，点击应用图标那么就是Launcher,内部启动那么是就是Activiy所在的进程了）
+
+      	    4)ApplicationThread不执行真的启动操作，而是通过ActivityManagerService.activityPaused接口进入到 ActivityManagerService进程中，看看是否需要创建新的进程来启动Activity
+
+      	    5)对于点击应用图标的情况，ActivityManagerService在这步中，会调用startProcessLocked创建新进程
+
+      	    6)ActivityManagerService调用ApplicationThread.sheduleLaunchActivity接口，通知相应的进程来执行启动Activity的操作
+
+      	    7)ApplicationThead把这个启动Activity的操作转发给ActivityThread，ActivityThread通过ClassLoader导入相应的Activity类，然后把它启动起来
