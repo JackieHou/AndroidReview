@@ -298,3 +298,67 @@ Android底层
       	    6)ActivityManagerService调用ApplicationThread.sheduleLaunchActivity接口，通知相应的进程来执行启动Activity的操作
 
       	    7)ApplicationThead把这个启动Activity的操作转发给ActivityThread，ActivityThread通过ClassLoader导入相应的Activity类，然后把它启动起来
+
+
+    简述如何将Activity展现在手机上
+      6.0以前
+    	  1.在Activity创建是调用attach方法（在onCreate方法前面调用）
+
+    	  2.在attach方法中，会调用PolicManager.makeNewWindow()创建PhoneWindow
+    	    mWindow = PolicyManager.makeNewWindow(this);
+    		 makeNewWindowd调用的是第3步骤中的方法
+
+    	  3.在IPolicy的实现类中创建了PhoneWindow
+    	     sPolicy.makeNewWindow(context)
+
+    	  4.在PhoneWindow中setContentView的方法中,添加显示内容
+    		public void setContentView(int layoutResID) {
+    			if (mContentParent == null) {
+    				installDecor();
+    			} else {
+    				mContentParent.removeAllViews();
+    			}
+    			mLayoutInflater.inflate(layoutResID, mContentParent);
+    			final Callback cb = getCallback();
+    			if (cb != null && !isDestroyed()) {
+    				cb.onContentChanged();
+    			}
+    		}
+    		PhoneWindow继承自Window
+    		setContentView中首先判断 mContentParent是否为null,
+    		   为null,调用 installDecor() 创建DecorView
+    		   不为null,删除所有的控件
+      6.0以后
+        1.在Activity创建是调用attach方法（在onCreate方法前面调用）
+
+    	2.在attach方法中创建PhoneWindow
+    	   mWindow = PhoneWindow(this);
+    	3. 在PhoneWindow中setContentView的方法中,添加显示内容
+    	        @Override
+    			public void setContentView(int layoutResID) {
+    				// Note: FEATURE_CONTENT_TRANSITIONS may be set in the process of installing the window
+    				// decor, when theme attributes and the like are crystalized. Do not check the feature
+    				// before this happens.
+    				if (mContentParent == null) {
+    					installDecor();
+    				} else if (!hasFeature(FEATURE_CONTENT_TRANSITIONS)) {
+    					mContentParent.removeAllViews();
+    				}
+
+    				if (hasFeature(FEATURE_CONTENT_TRANSITIONS)) {
+    					final Scene newScene = Scene.getSceneForLayout(mContentParent, layoutResID,
+    							getContext());
+    					transitionTo(newScene);
+    				} else {
+    					mLayoutInflater.inflate(layoutResID, mContentParent);
+    				}
+    				mContentParent.requestApplyInsets();
+    				final Callback cb = getCallback();
+    				if (cb != null && !isDestroyed()) {
+    					cb.onContentChanged();
+    				}
+    			}
+
+        Activity、Window和View三者间的关系
+    	  Activity通过attach方法创建Window
+    	  Window通过setContentView来添加View
