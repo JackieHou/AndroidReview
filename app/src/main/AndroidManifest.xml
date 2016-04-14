@@ -98,9 +98,11 @@
             android:name=".shapedemo.ShapeDemoActivity"
             android:label="ShapeDemoActivity" />
         <activity
-            android:configChanges="orientation|keyboardHidden|screenSize"
             android:name=".screendemo.ScreenActivity"
-            android:label="ScreenActivity"></activity>
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="ScreenActivity" />
+        <activity android:name=".viewdemo.CirclePhotoActivity" />
+        <activity android:name=".viewdemo.ViewActivity"></activity>
     </application>
 
 </manifest>

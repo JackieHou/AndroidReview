@@ -362,3 +362,16 @@ Android底层
         Activity、Window和View三者间的关系
     	  Activity通过attach方法创建Window
     	  Window通过setContentView来添加View
+
+
+
+    自定义View
+        Android LayoutInflater原理分析，带你一步步深入了解View(一)   http://blog.csdn.net/guolin_blog/article/details/12921889
+        Android视图绘制流程完全解析，带你一步步深入了解View(二)   http://blog.csdn.net/guolin_blog/article/details/16330267
+
+        LayoutInflater
+          inflate
+              解析xml
+              迭代rInflate
+                 调用createViewFromTag创建view
+
