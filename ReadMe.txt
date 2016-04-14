@@ -265,7 +265,7 @@ Android底层
         2. AndroidRuntime.start
             startVM
             startReg---注册JNI
-            ZygoteInitl.main
+            ZygoteInit.main
 
         3. ZygoteInit.main
              registerZygoteSocket();   创建socket用于和ActivityManagerService通信
@@ -273,7 +273,63 @@ Android底层
              runSelectLoopMode   进入无限循环 等待ActivityManagerService请求创建应用进程
 
         4. ZygoteInit.registerZygoteSocket()
-             zygote   根据文件描述符
+             //zygote   根据文件描述符
+             LocalServerSocket
+
+        5. ZygoteInit.startSystemServer
+             Zygote.forSystemServer---->创建服务器组件
+             新进程会执行 handleSystemServerProcess
+
+        6. ZygoteInit.handleSystemServerProcess
+             closeServiceSocket()
+             RuntimeInit.zygoteInit
+
+        7. RuntimeInit.zygoteInit
+             zygoteInitNative
+             SystemServer.main
+
+        8. RuntimeInit.zygoteInitNative
+
+        9. SystemServer.main
+            init1()
+            init2()  ------ ServerThread
+
+        10. ZygoteInit.runSelectLoopMode
+              等待ActivityManagerService来连接这个Socket
+
+
+        ------------------------------------------------------
+        1. init  init.rc(配置，启动守护进程ServerManger)
+        2. app_main.cpp
+              AppRuntime.start(AndroidRuntime.start)
+                  startVm
+                  startReg--JNI  AndroidRuntime启动
+                   ZygoteInit.main
+        3. ZygoteInit.main
+            SystemServer.main--->init1
+        4. init1()
+            init1()   -----开启了Libraries
+            iinit1()会调用 init2()
+        5. init2()
+            开启ServerThread---->Framework
+        6. Framework
+           启动 ActivityManager  WindowManager  PackeManager
+
+
+
+   开机时间消耗
+      1.ZygoteInit.main  预加载类
+      2.开机会扫描所有app
+      3.SystemServer创建的那些Server
+
+    安卓工程的启动过程
+      1.开发工具：.java--编译--- .class
+      2.dx工具  ：.class--打包----- .dex
+      3. .dex + 资源 ----打包-- apk
+      4. .apk安装到虚拟机
+      5. 启动程序----开启进程----开启主线程
+      6.创建Activty对象 ---- 执行OnCreate()
+      7.按照 main.xml 文件初始化界面
 
 
     应用启动过程
@@ -368,10 +424,39 @@ Android底层
     自定义View
         Android LayoutInflater原理分析，带你一步步深入了解View(一)   http://blog.csdn.net/guolin_blog/article/details/12921889
         Android视图绘制流程完全解析，带你一步步深入了解View(二)   http://blog.csdn.net/guolin_blog/article/details/16330267
+        Android视图状态及重绘流程分析，带你一步步深入了解View(三)  http://blog.csdn.net/guolin_blog/article/details/17045157
 
         LayoutInflater
           inflate
               解析xml
               迭代rInflate
                  调用createViewFromTag创建view
+
+
+         onMeasure(int widthMeasureSpec,int heightMeasureSpec)
+               默认： getDefualtSize 来测量
+             设置值得是(必须) setMeasureDimension(-,-)
+             onMeasure()方法调用后，我们就可以使用 getMeasureWidth() getMeasureHeight()
+             EXACTLY  MATCH_PARENT
+             AT_MOST  WRAP_CONTENT
+             EXACTLY
+
+         onLayout(boolean changed,int l,int t,int r,int b)
+          onLayout()方法调用一个就可以使用 getWidth() getHeight()
+
+           getMeasureWidth() 和getWidth的区别
+              1.getMeasureWidth()方法在measure()过程结束后就可以获取到了，
+              2.getWidth()方法要在layout()过程结束后才能获取到
+              3.getMeasureWidth()方法中的值是通过setMeasuredDimension()方法来进行设置的
+              4.而getWidth()方法中的值则是通过视图右边的坐标减去左边的坐标计算出来的。
+
+         onDraw(Canvas canvas)
+            draw(canvas canvas)六个步骤
+               1. Draw the background
+               2. If necessary, save the canvas' layers to prepare for fading
+               3. Draw view's content(这个步骤中调用onDraw()方法)
+               4. Draw children
+               5. If necessary, draw the fading edges and restore layers
+               6. Draw decorations(装饰) (scrollbars for instance)
+
 

@@ -86,7 +86,7 @@ public class ScreenActivity extends AppCompatActivity {
         int px = dip2px(value);
         String str = "density="+density+"\r\n" +
                value + "px = " + dp + "dp\r\n"+
-               value + "dp = " + px + "px\r\n";
+               value + "dp = " + px + "px";
         Toast.makeText(ScreenActivity.this, str, Toast.LENGTH_LONG).show();
     }
 
