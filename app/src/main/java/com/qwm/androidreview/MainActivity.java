@@ -19,6 +19,7 @@ import com.qwm.androidreview.screendemo.ScreenActivity;
 import com.qwm.androidreview.servicedemo.ServiceActivity;
 import com.qwm.androidreview.shapedemo.ShapeDemoActivity;
 import com.qwm.androidreview.view.MyGridView;
+import com.qwm.androidreview.viewdemo.ViewActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         itemList.add("动画测试");
         itemList.add("Shape测试");
         itemList.add("屏幕适配");
+        itemList.add("view");
         contentMgv.setAdapter(new MyGridAdapter(this, itemList));
         contentMgv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -71,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, ShapeDemoActivity.class));
                 } else if ("屏幕适配".equals(itemStr)) {
                     startActivity(new Intent(MainActivity.this, ScreenActivity.class));
+                } else if ("view".equals(itemStr)) {
+                    startActivity(new Intent(MainActivity.this, ViewActivity.class));
                 }
             }
         });
