@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,6 +7,51 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.qwm.androidreview.xmljsondemo.XmlJsonActivity">
 
-</RelativeLayout>
+    <Button
+        android:text="写xml"
+        android:onClick="writeXML"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="读xml"
+        android:onClick="readXML"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+      android:textAllCaps="false"
+        android:text="写Gson"
+        android:onClick="writeGson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:textAllCaps="false"
+        android:text="读Gson"
+        android:onClick="readGson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+<Button
+    android:textAllCaps="false"
+        android:text="写fastjson"
+        android:onClick="writeFastjson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:textAllCaps="false"
+        android:text="读fastjson"
+        android:onClick="readFastjson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>

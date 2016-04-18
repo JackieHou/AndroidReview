@@ -22,6 +22,7 @@ import com.qwm.androidreview.servicedemo.ServiceActivity;
 import com.qwm.androidreview.shapedemo.ShapeDemoActivity;
 import com.qwm.androidreview.view.MyGridView;
 import com.qwm.androidreview.viewdemo.ViewActivity;
+import com.qwm.androidreview.xmljsondemo.XmlJsonActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         itemList.add("屏幕适配");
         itemList.add("view");
         itemList.add("数据存储");
+        itemList.add("Xml和Json");
         contentMgv.setAdapter(new MyGridAdapter(this, itemList));
         contentMgv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -83,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, ViewActivity.class));
                 } else if ("数据存储".equals(itemStr)) {
                     startActivity(new Intent(MainActivity.this, FileStorageActivity.class));
+                }else if ("Xml和Json".equals(itemStr)) {
+                    startActivity(new Intent(MainActivity.this, XmlJsonActivity.class));
                 }
             }
         });
