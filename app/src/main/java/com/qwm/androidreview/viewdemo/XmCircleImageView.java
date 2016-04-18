@@ -30,6 +30,7 @@ public class XmCircleImageView extends ImageView {
         super(context, attrs);
     }
 
+
     @Override
     protected void onDraw(Canvas canvas) {
         BitmapDrawable drawable = (BitmapDrawable)getDrawable();

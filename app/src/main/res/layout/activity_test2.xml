@@ -12,4 +12,6 @@ tools:context="com.qwm.androidreview.activitydemo.Test02Activity">
     android:text="用来测试 OnReStart"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content" />
+
+
 </RelativeLayout>

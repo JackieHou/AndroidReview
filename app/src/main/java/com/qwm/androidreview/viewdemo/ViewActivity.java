@@ -41,9 +41,41 @@ public class ViewActivity extends AppCompatActivity {
 //        imageIv = (ImageView)findViewById(R.id.iv_image);
 //        Bitmap bitmap = BitmapFactory.decodeResource(getResources(),R.mipmap.qiwenmingshiwo);
 //        imageIv.setImageBitmap(toRoundBitmap1(bitmap));
+
+        measureData();
+
     }
 
 
+
+    public void measureData(){
+        String exactly =  Integer.toBinaryString(View.MeasureSpec.EXACTLY);
+        String exactlyF =  Integer.toBinaryString(~View.MeasureSpec.EXACTLY);
+        String atmost = Integer.toBinaryString(View.MeasureSpec.AT_MOST);
+        String unspecified = Integer.toBinaryString(View.MeasureSpec.UNSPECIFIED);
+//        View.MeasureSpec.getMode();
+//        View.MeasureSpec.getSize()
+
+        exactly = stringAddZero(exactly);
+        exactlyF = stringAddZero(exactlyF);
+        atmost = stringAddZero(atmost);
+        unspecified = stringAddZero(unspecified);
+
+        Log.i(TAG, "---View.MeasureSpec.EXACTLY："+exactly);
+        Log.i(TAG, "---View.MeasureSpec.AT_MOST："+ atmost);
+        Log.i(TAG, "---View.MeasureSpec.UNSPECIFIED："+ unspecified);
+
+        Log.i(TAG, "--- ~View.MeasureSpec.EXACTLY："+exactlyF);
+    }
+
+    public String stringAddZero(String str){
+        StringBuilder sb = new StringBuilder();
+        for (int i = 32; i > str.length(); i--) {
+            sb.append("0");
+        }
+        sb.append(str);
+        return  sb.toString();
+    }
 
     public void toCirclePhoto(View view){
         startActivity(new Intent(this,CirclePhotoActivity.class));

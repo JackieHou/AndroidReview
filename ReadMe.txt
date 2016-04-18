@@ -95,7 +95,7 @@ AsyncTask
     ---->exec.execute(mFuture); //执行任务
 
 ListView优化
-   复用coverView
+   复用convertView
        ViewHolder
    分页加载
        int position = contentLv.getLastVisiblePosition();

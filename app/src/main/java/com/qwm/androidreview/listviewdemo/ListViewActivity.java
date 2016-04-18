@@ -1,5 +1,6 @@
 package com.qwm.androidreview.listviewdemo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -81,5 +82,13 @@ public class ListViewActivity extends AppCompatActivity {
         myAdapter.notifyDataSetChanged();
 //        ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_expandable_list_item_1,mList);
 //        contentLv.setAdapter(arrayAdapter);
+    }
+
+
+    public void testListView(View view){
+        startActivity(new Intent(this,ListGridActivity.class));
+    }
+    public void testGridView(View view){
+        startActivity(new Intent(this,GridViewActivity.class));
     }
 }

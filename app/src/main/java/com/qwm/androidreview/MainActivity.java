@@ -8,9 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 
+import com.qwm.androidreview.activityservicedemo.ActivityServiceActivity;
 import com.qwm.androidreview.animodemo.AnimoActivity;
 import com.qwm.androidreview.activitydemo.Test01Activity;
 import com.qwm.androidreview.adapter.MyGridAdapter;
+import com.qwm.androidreview.filestoragedemo.FileStorageActivity;
 import com.qwm.androidreview.listviewdemo.ListViewActivity;
 import com.qwm.androidreview.pictureoomdemo.PictureOOMActivity;
 import com.qwm.androidreview.providerdemo.ProviderActivity;
@@ -44,12 +46,14 @@ public class MainActivity extends AppCompatActivity {
         itemList.add("广播接受者测试");
         itemList.add("内容提供者测试");
         itemList.add("Service测试");
+        itemList.add("Service和Activity");
         itemList.add("ListView测试");
         itemList.add("图片OOM测试");
         itemList.add("动画测试");
         itemList.add("Shape测试");
         itemList.add("屏幕适配");
         itemList.add("view");
+        itemList.add("数据存储");
         contentMgv.setAdapter(new MyGridAdapter(this, itemList));
         contentMgv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -63,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
                     onTestProvider(null);
                 } else if ("Service测试".equals(itemStr)) {
                     onTestService();
+                }else if ("Service和Activity".equals(itemStr)) {
+                    startActivity(new Intent(MainActivity.this, ActivityServiceActivity.class));
                 } else if ("ListView测试".equals(itemStr)) {
                     startActivity(new Intent(MainActivity.this, ListViewActivity.class));
                 } else if ("图片OOM测试".equals(itemStr)) {
@@ -75,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, ScreenActivity.class));
                 } else if ("view".equals(itemStr)) {
                     startActivity(new Intent(MainActivity.this, ViewActivity.class));
+                } else if ("数据存储".equals(itemStr)) {
+                    startActivity(new Intent(MainActivity.this, FileStorageActivity.class));
                 }
             }
         });
