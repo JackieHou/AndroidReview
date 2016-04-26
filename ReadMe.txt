@@ -83,6 +83,25 @@ Handler
     ---loop()
     --->dispatchMessage(msg)    msg.target.dispatchMessage;
     --->handlerMessage(msg)
+
+    叙述：
+	   首先，handler的创建，分为两种，一种是主线程的创建，另一个种是子线程上的创建。
+	   主线程上，创建Activity的时候，会调用ActivityThread，在ActivityThread中调用了，
+	   Looper.prepareMainLooper();初始化了looper对象，然后创建主线程上的Handler对象，
+	   最后调用了Looper.loop()方法
+	   子线程上，首先我们调用 Looper.prepare()初始化looper对象,然后new Handler(),
+	   最后调用Looper.loop()
+	   1. 在prepare()方法中，创建当前私有的Looper对象,存储到ThreadLocal中，它的MessageQueue也是私有的
+	   2. 我们在创建handler的时候，会初始化 mLooper 和 mQueue这两个成员变量。mLooper = Looper.myLooper
+	   mQueue = mLooper.mQueue,从Looper中获取对相的mQueue对象，当我们需要发消息的时候，我们调用
+	   sendMessage(msg),在这个方法中我们接着调用调用 sendMessageDelayed(msg,0),接着调用sendMessageAtTime(msg,updateMills),
+	   然后调用 enqueueMssage(que,msg,updateMills),在这个方法里面，我们把自身的handler(this)设置给msg.target,
+	   接着调用que.enqueueMessage(msg,when),在MessageQueue中，有一个成员变量mMessages，记录排在最前面
+	   的消息，所以在这个方法中，更具传入的时间，重新排序，把时间最早的消息放到最前面
+	   3. Looper.loop()用一个死循环，不断的送MessageQue中提取消息（mQueue.next()）,然后使用msg的target去分发消息
+	   （msg.target.dispatchMessage(msg)）
+	   4.在handler的dispatchMessage(msg)方法中，调用了handlerMessage(msg)来处理消息
+
 AsyncTask
     AsyncTask()
        mWorker

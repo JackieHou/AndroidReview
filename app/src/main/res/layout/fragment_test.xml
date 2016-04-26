@@ -1,0 +1,25 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.qwm.androidreview.viewpagerdemo.TestFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+
+    <com.qwm.androidreview.viewpagerdemo.MyView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_gravity="center"
+        android:id="@+id/tv_text"
+        android:textSize="50sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xxxxxxx" />
+
+</FrameLayout>

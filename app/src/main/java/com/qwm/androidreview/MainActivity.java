@@ -12,7 +12,11 @@ import com.qwm.androidreview.activityservicedemo.ActivityServiceActivity;
 import com.qwm.androidreview.animodemo.AnimoActivity;
 import com.qwm.androidreview.activitydemo.Test01Activity;
 import com.qwm.androidreview.adapter.MyGridAdapter;
+import com.qwm.androidreview.asyncdemo.AsyncActivity;
+import com.qwm.androidreview.eventdemo.EventActivity;
 import com.qwm.androidreview.filestoragedemo.FileStorageActivity;
+import com.qwm.androidreview.fragmentdemo.FragmentDemoActivity;
+import com.qwm.androidreview.listazdemo.ListViewAZDemoctivity;
 import com.qwm.androidreview.listviewdemo.ListViewActivity;
 import com.qwm.androidreview.pictureoomdemo.PictureOOMActivity;
 import com.qwm.androidreview.providerdemo.ProviderActivity;
@@ -22,6 +26,8 @@ import com.qwm.androidreview.servicedemo.ServiceActivity;
 import com.qwm.androidreview.shapedemo.ShapeDemoActivity;
 import com.qwm.androidreview.view.MyGridView;
 import com.qwm.androidreview.viewdemo.ViewActivity;
+import com.qwm.androidreview.viewpagerdemo.ViewpagerActivity;
+import com.qwm.androidreview.vollydemo.VolleyActivity;
 import com.qwm.androidreview.xmljsondemo.XmlJsonActivity;
 
 import java.util.ArrayList;
@@ -56,6 +62,12 @@ public class MainActivity extends AppCompatActivity {
         itemList.add("view");
         itemList.add("数据存储");
         itemList.add("Xml和Json");
+        itemList.add("异步测试");
+        itemList.add("事件分发");
+        itemList.add("Volley");
+        itemList.add("Fragment");
+        itemList.add("ListView A-Z");
+        itemList.add("Viewpager");
         contentMgv.setAdapter(new MyGridAdapter(this, itemList));
         contentMgv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -87,6 +99,18 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, FileStorageActivity.class));
                 }else if ("Xml和Json".equals(itemStr)) {
                     startActivity(new Intent(MainActivity.this, XmlJsonActivity.class));
+                }else if ("异步测试".equals(itemStr)) {
+                    startActivity(new Intent(MainActivity.this, AsyncActivity.class));
+                }else if ("事件分发".equals(itemStr)) {
+                    startActivity(new Intent(MainActivity.this, EventActivity.class));
+                }else if ("Volley".equals(itemStr)) {
+                    startActivity(new Intent(MainActivity.this, VolleyActivity.class));
+                }else if ("Fragment".equals(itemStr)) {
+                    startActivity(new Intent(MainActivity.this, FragmentDemoActivity.class));
+                }else if ("ListView A-Z".equals(itemStr)) {
+                    startActivity(new Intent(MainActivity.this, ListViewAZDemoctivity.class));
+                }else if ("Viewpager".equals(itemStr)) {
+                    startActivity(new Intent(MainActivity.this, ViewpagerActivity.class));
                 }
             }
         });

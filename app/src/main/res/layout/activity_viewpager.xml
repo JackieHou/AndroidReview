@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xm="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.qwm.androidreview.viewpagerdemo.RectIndicator
+        android:id="@+id/ri_indcator"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        xm:indicator_bgcolor="#ef0000"
+        xm:indicator_color="#ffffff"
+        xm:indicator_height="3dp"
+        xm:indicator_title_color="#ffffff"
+        xm:indicator_width="30dp"
+        xm:title_size="15dp"
+        xm:item_count1="5" >>
+
+    </com.qwm.androidreview.viewpagerdemo.RectIndicator>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+</LinearLayout>

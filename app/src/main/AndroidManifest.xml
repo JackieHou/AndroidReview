@@ -160,7 +160,13 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".xmljsondemo.XmlJsonActivity"></activity>
+        <activity android:name=".xmljsondemo.XmlJsonActivity" />
+        <activity android:name=".asyncdemo.AsyncActivity" />
+        <activity android:name=".eventdemo.EventActivity" />
+        <activity android:name=".vollydemo.VolleyActivity" />
+        <activity android:name=".fragmentdemo.FragmentDemoActivity" />
+        <activity android:name=".listazdemo.ListViewAZDemoctivity" />
+        <activity android:name=".viewpagerdemo.ViewpagerActivity"></activity>
     </application>
 
 </manifest>
