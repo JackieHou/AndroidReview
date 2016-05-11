@@ -1,0 +1,49 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <item
+        android:id="@+id/id_action_listview"
+        android:orderInCategory="100"
+        android:title="ListView"/>
+
+    <item
+        android:id="@+id/id_action_horizontalListview"
+        android:orderInCategory="100"
+        android:title="HorizontalListView" />
+
+    <item
+        android:id="@+id/id_action_gridview"
+        android:orderInCategory="100"
+         android:title="GirdView"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/id_action_horizontalGridView"
+        android:orderInCategory="100"
+         android:title="HorizontalGridView" />
+
+    <item
+        android:id="@+id/id_action_Staggered_h_list"
+        android:orderInCategory="100"
+        android:title="Staggered_h_list" />
+
+    <item
+        android:id="@+id/id_action_Staggered_v_list"
+        android:orderInCategory="100"
+        android:title="Staggered_v_list" />
+
+    <item
+        android:id="@+id/id_action_Staggered_h_grid"
+        android:orderInCategory="100"
+        android:title="Staggered_h_grid" />
+    <item
+    android:id="@+id/id_action_Staggered_v_grid"
+    android:orderInCategory="100"
+    android:title="Staggered_v_grid" />
+
+    <item
+        android:id="@+id/id_action_Staggered_no_rule"
+        android:orderInCategory="100"
+        android:title="Staggered_no_rule" />
+
+</menu>

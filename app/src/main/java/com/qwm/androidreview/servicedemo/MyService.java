@@ -3,6 +3,7 @@ package com.qwm.androidreview.servicedemo;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Binder;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
@@ -71,6 +72,7 @@ public class MyService extends Service{
         public XmBinder(int age, String name) {
             this.age = age;
             this.name = name;
+
         }
 
 
@@ -96,4 +98,5 @@ public class MyService extends Service{
             return name;
         }
     }
+
 }

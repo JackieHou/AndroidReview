@@ -3,6 +3,7 @@ package com.qwm.androidreview.sqldemo;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class MyOpenHelper extends SQLiteOpenHelper {
 
@@ -24,5 +25,6 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase arg0, int arg1, int arg2) {
         System.out.println("数据库被升级了");
     }
+
 
 }
