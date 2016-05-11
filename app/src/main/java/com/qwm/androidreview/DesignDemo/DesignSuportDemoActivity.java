@@ -45,6 +45,6 @@ public class DesignSuportDemoActivity extends AppCompatActivity {
 
                 }
             }
-        }
+        });
     }
 }
