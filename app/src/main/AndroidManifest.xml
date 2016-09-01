@@ -175,7 +175,10 @@
         <activity android:name=".picassodemo.PicassoDemoActivity" />
         <activity android:name=".bluetoothdemo.BluetoothDemoActivity" />
         <activity android:name=".recyclerviewdemo.RecyclerViewDemoActivity" />
-        <activity android:name=".DesignDemo.DesignSuportDemoActivity"></activity>
+        <activity android:name=".DesignDemo.DesignSuportDemoActivity" />
+        <activity android:name=".materialdesigndemo.MDDemoActivity" />
+        <activity android:name=".materialdesigndemo.TouchFeedbackActivity" />
+        <activity android:name=".materialdesigndemo.CircularRevealDemoActivity"></activity>
     </application>
 
 </manifest>

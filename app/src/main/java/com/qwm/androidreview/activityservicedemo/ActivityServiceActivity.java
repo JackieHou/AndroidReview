@@ -44,7 +44,7 @@ public class ActivityServiceActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activity_service);
+        setContentView(R.layout.activity_service);
         textTv = (TextView)findViewById(R.id.tv_text);
         reciever = new MyBroadcastReciever();
         IntentFilter filter = new IntentFilter(MyTestService.action_broad);

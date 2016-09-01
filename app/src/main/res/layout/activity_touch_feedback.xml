@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.qwm.androidreview.materialdesigndemo.TouchFeedbackActivity">
+
+
+    <Button
+        android:text="test"
+        android:colorControlHighlight="#ff00ff"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:layout_width="300dp"
+        android:layout_height="50dp" />
+
+    <Button
+        android:text="test"
+        android:colorControlHighlight="#ff00ff"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_width="300dp"
+        android:layout_height="50dp" />
+
+
+    <Button
+        android:text="test"
+        android:colorControlHighlight="#ff00ff"
+        android:background="@drawable/md_ripple_bg"
+        android:layout_width="300dp"
+        android:layout_height="50dp" />
+
+    <RelativeLayout
+        android:colorControlHighlight="#ff00ff"
+        android:background="#87f0f8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:text="test"
+            android:colorControlHighlight="#ff00ff"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_width="300dp"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

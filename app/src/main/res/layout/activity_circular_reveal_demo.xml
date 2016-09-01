@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.qwm.androidreview.materialdesigndemo.CircularRevealDemoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/test1_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试1" />
+
+        <Button
+            android:id="@+id/test2_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试2" />
+        <Button
+            android:id="@+id/test3_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试3" />
+        <Button
+            android:id="@+id/test4_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试4" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/test1_ll"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#ff7777"></RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/test2_ll"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/shape_reveal_test"></RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/test3_ll"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="#05e8e8"></RelativeLayout>
+            <RelativeLayout
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/test4_ll"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/shape_reveal_test"></RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

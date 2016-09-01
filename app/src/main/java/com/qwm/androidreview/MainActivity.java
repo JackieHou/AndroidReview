@@ -3,16 +3,16 @@ package com.qwm.androidreview;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 
 import com.qwm.androidreview.DesignDemo.DesignSuportDemoActivity;
-import com.qwm.androidreview.activityservicedemo.ActivityServiceActivity;
-import com.qwm.androidreview.animodemo.AnimoActivity;
 import com.qwm.androidreview.activitydemo.Test01Activity;
+import com.qwm.androidreview.activityservicedemo.ActivityServiceActivity;
 import com.qwm.androidreview.adapter.MyGridAdapter;
+import com.qwm.androidreview.animodemo.AnimoActivity;
 import com.qwm.androidreview.asyncdemo.AsyncActivity;
 import com.qwm.androidreview.bluetoothdemo.BluetoothDemoActivity;
 import com.qwm.androidreview.eventdemo.EventActivity;
@@ -20,11 +20,11 @@ import com.qwm.androidreview.filestoragedemo.FileStorageActivity;
 import com.qwm.androidreview.fragmentdemo.FragmentDemoActivity;
 import com.qwm.androidreview.listazdemo.ListViewAZDemoctivity;
 import com.qwm.androidreview.listviewdemo.ListViewActivity;
+import com.qwm.androidreview.materialdesigndemo.MDDemoActivity;
 import com.qwm.androidreview.picassodemo.PicassoDemoActivity;
 import com.qwm.androidreview.pictureoomdemo.PictureOOMActivity;
 import com.qwm.androidreview.providerdemo.ProviderActivity;
 import com.qwm.androidreview.receiverdemo.ReceiverActivity;
-import com.qwm.androidreview.recyclerviewdemo.RecyclerViewDemoActivity;
 import com.qwm.androidreview.screendemo.ScreenActivity;
 import com.qwm.androidreview.servicedemo.ServiceActivity;
 import com.qwm.androidreview.shapedemo.ShapeDemoActivity;
@@ -36,7 +36,6 @@ import com.qwm.androidreview.xmljsondemo.XmlJsonActivity;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Callable;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -76,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         itemList.add("Picasso测试");
         itemList.add("Bluetooth测试");
         itemList.add("Design Support Library测试");
+        itemList.add("Material Design");
         contentMgv.setAdapter(new MyGridAdapter(this, itemList));
         contentMgv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -125,6 +125,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, BluetoothDemoActivity.class));
                 }else if ("Design Support Library测试".equals(itemStr)) {
                     startActivity(new Intent(MainActivity.this, DesignSuportDemoActivity.class));
+                }else if ("Material Design".equals(itemStr)) {
+                    startActivity(new Intent(MainActivity.this, MDDemoActivity.class));
                 }
             }
         });
