@@ -38,12 +38,18 @@
         </activity>
 
         <!-- lable 表示Activity的标题 -->
-        <activity
-            android:name=".activitydemo.Test01Activity"/>
+
         <activity
             android:name=".activitydemo.DialogActivity"
-            android:theme="@android:style/Theme.Dialog" />
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog" />
+        <activity android:name=".activitydemo.Test01Activity" />
         <activity android:name=".activitydemo.Test02Activity" />
+        <activity android:name=".activitydemo.Test03Activity">
+            <intent-filter>
+                <action android:name="com.qwm.androidreview.activitydemo.test"/>
+                <category android:name="com.qwm.androidreview.activitydemo.SHOWACTIVITY"/>
+            </intent-filter>
+        </activity>
 
         <!-- ===============================广播接收者 测试-================================================================ -->
         <!-- 广播接收者 测试 -->
@@ -177,7 +183,7 @@
         <activity android:name=".designdemo.DesignSuportDemoActivity" />
         <activity android:name=".materialdesigndemo.MDDemoActivity" />
         <activity android:name=".materialdesigndemo.TouchFeedbackActivity" />
-        <activity android:name=".materialdesigndemo.CircularRevealDemoActivity"></activity>
+        <activity android:name=".materialdesigndemo.CircularRevealDemoActivity" />
     </application>
 
 </manifest>

@@ -23,11 +23,24 @@ public class Test01Activity extends BaseActivity {
     }
 
     public void onTest(View view){
+//        显示启动
         startActivity(new Intent(this, DialogActivity.class));
     }
 
     public void onTest2(View view){
-        startActivity(new Intent(this,Test02Activity.class));
+        //显示启动
+        Intent intent = new Intent();
+        //----1----
+//        intent.setClass(this,Test02Activity.class);
+        //-----2-----
+        intent.setClassName(this,"com.qwm.androidreview.activitydemo.Test02Activity");
+        //-----3----
+//        intent.setClassName("com.qwm.androidreview.activitydemo","com.qwm.androidreview.activitydemo.Test02Activity");
+        startActivity(intent);
+    }
+
+    public void onTest3(View view){
+        startActivity(new Intent("com.qwm.androidreview.activitydemo.test"));
     }
 
     @Override

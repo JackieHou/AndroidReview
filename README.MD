@@ -25,3 +25,31 @@
 >内存不够，回收三种线程，内存够了，会自动重启  
 >如果用户手动关闭了服务，服务不会重启
 
+
+## 二、Android清单文件、四大组件、常用的布局文件
+### 1 清单文件、备份
+[专栏：Android清单文件详解](http://blog.csdn.net/column/details/androidmanifest.html)
+
+### 2 四大组件
+四大组件
+>Activity
+>BroadcastReceiver
+>ContentProvider
+>Service
+
+#### 2.1 Activity
+##### a 启动模式
+>Standard
+>SingleTop
+>SingleTask
+>SingleInstance
+
+##### b 启动方式
+
+
+##### c 生命周期
+
+##### d 能够传递的类型
+
+
+### 3 常用的布局文件
