@@ -9,9 +9,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
-public class FragmentDemoActivity extends AppCompatActivity {
+public class FragmentDemoActivity extends BaseActivity {
 
     private String TAG = FragmentDemoActivity.class.getName();
 

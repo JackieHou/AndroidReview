@@ -9,13 +9,14 @@ import android.view.ViewAnimationUtils;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class CircularRevealDemoActivity extends AppCompatActivity {
+public class CircularRevealDemoActivity extends BaseActivity {
 
     @Bind(R.id.test1_btn)
     Button test1Btn;

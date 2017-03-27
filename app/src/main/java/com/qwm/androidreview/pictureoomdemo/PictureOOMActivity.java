@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 import java.util.Arrays;
@@ -26,7 +27,7 @@ import java.util.List;
  * @ClassName: PictureOOMActivity
  * @Description: 图片OOM一场
  */
-public class PictureOOMActivity extends AppCompatActivity {
+public class PictureOOMActivity extends BaseActivity {
     private String TAG = PictureOOMActivity.class.getName();
     /**
      * 图片

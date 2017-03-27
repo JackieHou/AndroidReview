@@ -3,9 +3,10 @@ package com.qwm.androidreview.shapedemo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
-public class ShapeDemoActivity extends AppCompatActivity {
+public class ShapeDemoActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

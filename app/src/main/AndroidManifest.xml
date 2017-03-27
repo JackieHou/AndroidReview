@@ -39,8 +39,7 @@
 
         <!-- lable 表示Activity的标题 -->
         <activity
-            android:name=".activitydemo.Test01Activity"
-            android:label="OtherActivity" />
+            android:name=".activitydemo.Test01Activity"/>
         <activity
             android:name=".activitydemo.DialogActivity"
             android:theme="@android:style/Theme.Dialog" />
@@ -175,7 +174,7 @@
         <activity android:name=".picassodemo.PicassoDemoActivity" />
         <activity android:name=".bluetoothdemo.BluetoothDemoActivity" />
         <activity android:name=".recyclerviewdemo.RecyclerViewDemoActivity" />
-        <activity android:name=".DesignDemo.DesignSuportDemoActivity" />
+        <activity android:name=".designdemo.DesignSuportDemoActivity" />
         <activity android:name=".materialdesigndemo.MDDemoActivity" />
         <activity android:name=".materialdesigndemo.TouchFeedbackActivity" />
         <activity android:name=".materialdesigndemo.CircularRevealDemoActivity"></activity>

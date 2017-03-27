@@ -11,9 +11,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
-public class ServiceActivity extends AppCompatActivity {
+public class ServiceActivity extends BaseActivity {
 
     private Intent intent = null;
     private ServiceConnection sc;

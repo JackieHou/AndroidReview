@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 import com.qwm.androidreview.adapter.MyGridAdapter;
 
@@ -19,7 +20,7 @@ import java.util.ArrayList;
  * @ClassName: ListViewActivity
  * @Description: listview的优化
  */
-public class ListViewActivity extends AppCompatActivity {
+public class ListViewActivity extends BaseActivity {
 
     private ListView contentLv;
     private ArrayList<String> mList;

@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 /**
@@ -17,7 +18,7 @@ import com.qwm.androidreview.R;
  * @ClassName: PropertyAnimActivity
  * @Description:  属性动画
  */
-public class PropertyAnimActivity extends AppCompatActivity {
+public class PropertyAnimActivity extends BaseActivity {
 
     private TextView textTv;
 

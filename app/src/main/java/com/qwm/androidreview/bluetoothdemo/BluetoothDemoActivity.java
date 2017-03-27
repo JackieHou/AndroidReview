@@ -16,6 +16,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 import java.io.IOException;
@@ -32,7 +33,7 @@ import java.util.UUID;
  * @ClassName: BluetoothDemoActivity
  * @Description:  蓝牙测试
  */
-public class BluetoothDemoActivity extends AppCompatActivity {
+public class BluetoothDemoActivity extends BaseActivity {
 
     private static final String TAG = "BluetoothDemoActivity";
     private BluetoothAdapter mBtAdapter;

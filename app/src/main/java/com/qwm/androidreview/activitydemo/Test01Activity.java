@@ -8,9 +8,10 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
-public class Test01Activity extends AppCompatActivity {
+public class Test01Activity extends BaseActivity {
 
     private String TAG = Test01Activity.class.getName();
 

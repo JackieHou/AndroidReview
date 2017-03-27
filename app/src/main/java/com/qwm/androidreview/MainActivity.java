@@ -4,15 +4,14 @@ import android.app.ActivityManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 
-import com.qwm.androidreview.DesignDemo.DesignSuportDemoActivity;
+import com.qwm.androidreview.animodemo.AnimoActivity;
+import com.qwm.androidreview.designdemo.DesignSuportDemoActivity;
 import com.qwm.androidreview.activitydemo.Test01Activity;
 import com.qwm.androidreview.activityservicedemo.ActivityServiceActivity;
 import com.qwm.androidreview.adapter.MyGridAdapter;
-import com.qwm.androidreview.animodemo.AnimoActivity;
 import com.qwm.androidreview.asyncdemo.AsyncActivity;
 import com.qwm.androidreview.bluetoothdemo.BluetoothDemoActivity;
 import com.qwm.androidreview.eventdemo.EventActivity;
@@ -37,7 +36,7 @@ import com.qwm.androidreview.xmljsondemo.XmlJsonActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private MyGridView contentMgv;
     private ArrayList<String> itemList;
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void initGridView() {
         contentMgv = (MyGridView) findViewById(R.id.mgv_content);
-        itemList = new ArrayList<String>();
+        itemList = new ArrayList<>();
         itemList.add("Activity测试");
         itemList.add("广播接受者测试");
         itemList.add("内容提供者测试");
@@ -82,51 +81,55 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String itemStr = itemList.get(position);
                 if ("Activity测试".equals(itemStr)) {
-                    onTest(null);
+                    startActivity(itemStr,Test01Activity.class);
+//                    onTest(null);
                 } else if ("广播接受者测试".equals(itemStr)) {
-                    onTestReceiver(null);
+                    startActivity(itemStr,ReceiverActivity.class);
+//                    onTestReceiver(null);
                 } else if ("内容提供者测试".equals(itemStr)) {
+                    startActivity(itemStr,ProviderActivity.class);
                     onTestProvider(null);
                 } else if ("Service测试".equals(itemStr)) {
+                    startActivity(itemStr,ServiceActivity.class);
                     onTestService();
                 }else if ("Service和Activity".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, ActivityServiceActivity.class));
+                    startActivity(itemStr,ActivityServiceActivity.class);
                 } else if ("ListView测试".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, ListViewActivity.class));
+                    startActivity(itemStr,ListViewActivity.class);
                 } else if ("图片OOM测试".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, PictureOOMActivity.class));
+                    startActivity(itemStr,PictureOOMActivity.class);
                 } else if ("动画测试".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, AnimoActivity.class));
+                    startActivity(itemStr,AnimoActivity.class);
                 } else if ("Shape测试".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, ShapeDemoActivity.class));
+                    startActivity(itemStr,ShapeDemoActivity.class);
                 } else if ("屏幕适配".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, ScreenActivity.class));
+                    startActivity(itemStr,ScreenActivity.class);
                 } else if ("view".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, ViewActivity.class));
+                    startActivity(itemStr,ViewActivity.class);
                 } else if ("数据存储".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, FileStorageActivity.class));
+                    startActivity(itemStr,FileStorageActivity.class);
                 }else if ("Xml和Json".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, XmlJsonActivity.class));
+                    startActivity(itemStr,XmlJsonActivity.class);
                 }else if ("异步测试".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, AsyncActivity.class));
+                    startActivity(itemStr,AsyncActivity.class);
                 }else if ("事件分发".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, EventActivity.class));
+                    startActivity(itemStr,EventActivity.class);
                 }else if ("Volley".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, VolleyActivity.class));
+                    startActivity(itemStr,VolleyActivity.class);
                 }else if ("Fragment".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, FragmentDemoActivity.class));
+                    startActivity(itemStr,FragmentDemoActivity.class);
                 }else if ("ListView A-Z".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, ListViewAZDemoctivity.class));
+                    startActivity(itemStr,ListViewAZDemoctivity.class);
                 }else if ("Viewpager".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, ViewpagerActivity.class));
+                    startActivity(itemStr,ViewpagerActivity.class);
                 }else if ("Picasso测试".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, PicassoDemoActivity.class));
+                    startActivity(itemStr,PicassoDemoActivity.class);
                 }else if ("Bluetooth测试".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, BluetoothDemoActivity.class));
+                    startActivity(itemStr,BluetoothDemoActivity.class);
                 }else if ("Design Support Library测试".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, DesignSuportDemoActivity.class));
+                    startActivity(itemStr,DesignSuportDemoActivity.class);
                 }else if ("Material Design".equals(itemStr)) {
-                    startActivity(new Intent(MainActivity.this, MDDemoActivity.class));
+                    startActivity(itemStr,MDDemoActivity.class);
                 }
             }
         });
@@ -142,8 +145,8 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void onTestReceiver(View view) {
-//        getAppSatus(this,"com.qwm.androidreview");
         startActivity(new Intent(this, ReceiverActivity.class));
+//        getAppSatus(this,"com.qwm.androidreview");
     }
 
     /**

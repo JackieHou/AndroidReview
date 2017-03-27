@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 /**
@@ -14,7 +15,7 @@ import com.qwm.androidreview.R;
  * @ClassName: FrameAnimActivity
  * @Description: 帧动画
  */
-public class FrameAnimActivity extends AppCompatActivity {
+public class FrameAnimActivity extends BaseActivity {
 
     private ImageView imageIv;
 

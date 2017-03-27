@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.google.gson.Gson;
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 import junit.framework.Test;
@@ -29,7 +30,7 @@ import java.util.List;
  * @ClassName: XmlJsonActivity
  * @Description: XML JSON操作
  */
-public class XmlJsonActivity extends AppCompatActivity {
+public class XmlJsonActivity extends BaseActivity {
 
     private String TAG = XmlJsonActivity.class.getName();
 

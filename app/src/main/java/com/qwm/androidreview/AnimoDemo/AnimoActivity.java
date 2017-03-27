@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 /**
  * @author qiwenming
@@ -12,7 +13,7 @@ import com.qwm.androidreview.R;
  * @ClassName: AnimoActivity
  * @Description:  动画
  */
-public class AnimoActivity extends AppCompatActivity {
+public class AnimoActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

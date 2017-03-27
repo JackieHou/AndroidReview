@@ -1,4 +1,4 @@
-package com.qwm.androidreview.DesignDemo;
+package com.qwm.androidreview.designdemo;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 import com.qwm.androidreview.adapter.MyGridAdapter;
 import com.qwm.androidreview.recyclerviewdemo.RecyclerViewDemoActivity;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class DesignSuportDemoActivity extends AppCompatActivity {
+public class DesignSuportDemoActivity extends BaseActivity {
 
     @Bind(R.id.mgv_content)
     MyGridView mgvContent;

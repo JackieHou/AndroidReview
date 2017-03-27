@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 import com.qwm.androidreview.sqldemo.MyOpenHelper;
 
@@ -23,7 +24,7 @@ import java.util.List;
  * @ClassName: ProviderActivity
  * @Description:  内容提供者的Activity
  */
-public class ProviderActivity extends AppCompatActivity {
+public class ProviderActivity extends BaseActivity {
 
     private String TAG = ProviderActivity.class.getName();
 

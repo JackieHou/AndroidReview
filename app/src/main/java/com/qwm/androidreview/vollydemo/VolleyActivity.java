@@ -20,6 +20,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 import org.json.JSONObject;
@@ -30,7 +31,7 @@ import org.json.JSONObject;
  * @ClassName: VolleyActivity
  * @Description:  Volley测试
  */
-public class VolleyActivity extends AppCompatActivity {
+public class VolleyActivity extends BaseActivity {
 
     private TextView contentTv;
     private ImageView iv1;

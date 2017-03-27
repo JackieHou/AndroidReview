@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 import java.io.BufferedReader;
@@ -34,7 +35,7 @@ import java.util.List;
  * @ClassName: FileStorageActivity
  * @Description:  数据存储 5种
  */
-public class FileStorageActivity extends AppCompatActivity {
+public class FileStorageActivity extends BaseActivity {
 
     private String TAG = FileStorageActivity.class.getName();
 

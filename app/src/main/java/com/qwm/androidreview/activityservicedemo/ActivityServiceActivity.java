@@ -20,6 +20,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 import com.qwm.androidreview.servicedemo.MyAIDL;
 
@@ -29,7 +30,7 @@ import com.qwm.androidreview.servicedemo.MyAIDL;
  * @ClassName: ActivityServiceActivity
  * @Description:  activity和servic通信测试
  */
-public class ActivityServiceActivity extends AppCompatActivity {
+public class ActivityServiceActivity extends BaseActivity {
 
     private String TAG = ActivityServiceActivity.class.getName();
     /**

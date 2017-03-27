@@ -5,12 +5,13 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class GridViewActivity extends AppCompatActivity {
+public class GridViewActivity extends BaseActivity {
 
     private List<String> mList = new ArrayList<>();
     private MyGridView gridView;

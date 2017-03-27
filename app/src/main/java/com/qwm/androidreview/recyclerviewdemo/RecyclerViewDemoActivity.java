@@ -9,6 +9,7 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ import butterknife.ButterKnife;
  * @ClassName: RecyclerViewDemoActivity
  * @Description: RecyclerView测试
  */
-public class RecyclerViewDemoActivity extends AppCompatActivity {
+public class RecyclerViewDemoActivity extends BaseActivity {
 
 
     @Bind(R.id.content_recv)

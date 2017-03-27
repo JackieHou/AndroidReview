@@ -16,7 +16,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        //picasso的混村设置
+        //picasso的缓存设置
 //        loadImageCache();
     }
 

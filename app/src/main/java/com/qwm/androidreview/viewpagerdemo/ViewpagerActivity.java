@@ -5,12 +5,13 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ViewpagerActivity extends AppCompatActivity {
+public class ViewpagerActivity extends BaseActivity {
 
     private RectIndicator indecatorRi;
     private ViewPager viewpagerVp;

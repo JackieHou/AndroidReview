@@ -5,9 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
-public class DialogActivity extends Activity {
+public class DialogActivity extends BaseActivity {
 
     private String TAG = DialogActivity.class.getName();
 

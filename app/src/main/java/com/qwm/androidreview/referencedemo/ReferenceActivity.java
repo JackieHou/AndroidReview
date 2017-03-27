@@ -3,6 +3,7 @@ package com.qwm.androidreview.referencedemo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 import java.lang.ref.PhantomReference;
@@ -10,7 +11,7 @@ import java.lang.ref.ReferenceQueue;
 import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
 
-public class ReferenceActivity extends AppCompatActivity {
+public class ReferenceActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

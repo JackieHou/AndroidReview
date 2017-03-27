@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 import com.qwm.androidreview.adapter.MyGridAdapter;
 import com.qwm.androidreview.view.MyGridView;
@@ -22,9 +23,7 @@ import butterknife.ButterKnife;
  * @className: MDDemoActivity
  * @description: mddemo
  */
-public class MDDemoActivity extends AppCompatActivity {
-
-
+public class MDDemoActivity extends BaseActivity {
     @Bind(R.id.mgv_content)
     MyGridView mgvContent;
     private List<String> list;

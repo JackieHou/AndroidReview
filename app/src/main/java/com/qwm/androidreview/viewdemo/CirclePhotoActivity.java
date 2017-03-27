@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 /** @author qiwenming
@@ -21,7 +22,7 @@ import com.qwm.androidreview.R;
  * @ClassName: CirclePhotoActivity
  * @Description: 圆形头像测试
  */
-public class CirclePhotoActivity extends AppCompatActivity {
+public class CirclePhotoActivity extends BaseActivity {
 
     private ImageView imageIv;
     private ImageView image2Iv;

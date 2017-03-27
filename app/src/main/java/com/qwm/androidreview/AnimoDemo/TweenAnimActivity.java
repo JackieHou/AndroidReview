@@ -7,6 +7,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 /**
@@ -15,7 +16,7 @@ import com.qwm.androidreview.R;
  * @ClassName: TweenAnimActivity
  * @Description:  补间动画
  */
-public class TweenAnimActivity extends AppCompatActivity {
+public class TweenAnimActivity extends BaseActivity {
 
     private ImageView imgPic;
     private Animation myAnimation;

@@ -5,9 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
-public class ReceiverActivity extends AppCompatActivity {
+public class ReceiverActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

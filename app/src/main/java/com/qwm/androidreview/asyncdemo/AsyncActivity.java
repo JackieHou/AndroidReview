@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 import java.util.concurrent.Callable;
@@ -21,7 +22,7 @@ import java.util.concurrent.ScheduledFuture;
  * @ClassName: AsyncActivity
  * @Description: 测试异步
  */
-public class AsyncActivity extends AppCompatActivity {
+public class AsyncActivity extends BaseActivity {
 
     private String TAG = AsyncActivity.class.getName();
 

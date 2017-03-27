@@ -5,13 +5,14 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ListGridActivity extends AppCompatActivity {
+public class ListGridActivity extends BaseActivity {
 
     private ListView listView;
 

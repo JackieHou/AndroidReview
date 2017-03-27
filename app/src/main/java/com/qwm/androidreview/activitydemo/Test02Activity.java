@@ -4,9 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
-public class Test02Activity extends AppCompatActivity {
+public class Test02Activity extends BaseActivity {
     
     private String TAG = Test02Activity.class.getName();
 

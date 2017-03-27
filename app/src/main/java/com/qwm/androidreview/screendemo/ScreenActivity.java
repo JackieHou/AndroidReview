@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 /**
  * @author qiwenming
@@ -18,7 +19,7 @@ import com.qwm.androidreview.R;
  * @ClassName: ScreenActivity
  * @Description:  屏幕适配
  */
-public class ScreenActivity extends AppCompatActivity {
+public class ScreenActivity extends BaseActivity {
     private String TAG = ScreenActivity.class.getName();
     private TextView contentTv;
     private float density = 1;

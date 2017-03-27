@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import java.util.Map;
  * @ClassName: ListViewAZDemoctivity
  * @Description:  TODO
  */
-public class ListViewAZDemoctivity extends AppCompatActivity {
+public class ListViewAZDemoctivity extends BaseActivity {
 
     private ListView listView;
     private Sidebar sidebar;

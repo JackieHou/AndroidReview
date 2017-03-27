@@ -4,12 +4,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PicassoDemoActivity extends AppCompatActivity {
+public class PicassoDemoActivity extends BaseActivity {
 
     private ListView contentLv;
     private List<String> mPicList = new ArrayList<>();
