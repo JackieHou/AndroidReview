@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.qwm.androidreview.eventdemo.BaseRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#ffccff"
     tools:context="com.qwm.androidreview.eventdemo.EventActivity">
 
-    <com.qwm.androidreview.eventdemo.MyButton
-        android:background="#f0f0f0"
-        android:id="@+id/btn_button"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <!--<com.qwm.androidreview.eventdemo.MyButton-->
+        <!--android:background="#f0f0f0"-->
+        <!--android:id="@+id/btn_button"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
 
     <!--<Button-->
         <!--android:background="#f0f0f0"-->
@@ -21,5 +18,38 @@
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent" />-->
 
+    <com.qwm.androidreview.eventdemo.MyBlueRelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="200dp">
 
-</RelativeLayout>
+        <com.qwm.androidreview.eventdemo.MyYellowLinearLayout
+            android:layout_width="200dp"
+            android:layout_height="150dp">
+        </com.qwm.androidreview.eventdemo.MyYellowLinearLayout>
+
+    </com.qwm.androidreview.eventdemo.MyBlueRelativeLayout>
+
+    <com.qwm.androidreview.eventdemo.MyGreenLinearLayout
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="300dp"
+        android:gravity="center"
+        android:layout_height="200dp">
+
+        <com.qwm.androidreview.eventdemo.MyRedLinearLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+        </com.qwm.androidreview.eventdemo.MyRedLinearLayout>
+
+        <com.qwm.androidreview.eventdemo.MyYellowLinearLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+        </com.qwm.androidreview.eventdemo.MyYellowLinearLayout>
+
+    </com.qwm.androidreview.eventdemo.MyGreenLinearLayout>
+
+
+</com.qwm.androidreview.eventdemo.BaseRelativeLayout>

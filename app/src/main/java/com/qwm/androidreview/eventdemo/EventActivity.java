@@ -20,37 +20,37 @@ public class EventActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
-        btn = (Button)findViewById(R.id.btn_button);
-
-        btn.setOnTouchListener(new MyOnTouchListener());
-
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.i(TAG, "onClick: -------");
-            }
-        });
+//        btn = (Button)findViewById(R.id.btn_button);
+//
+//        btn.setOnTouchListener(new MyOnTouchListener());
+//
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.i(TAG, "onClick: -------");
+//            }
+//        });
 
     }
 
 
-    class MyOnTouchListener implements View.OnTouchListener{
-
-        @Override
-        public boolean onTouch(View v, MotionEvent event) {
-           String xy = "x:"+ event.getX()+ "   y:"+event.getX();
-            switch (event.getAction()){
-                case MotionEvent.ACTION_DOWN:
-                    Log.i(TAG, "---down: "+xy);
-                    break;
-                case MotionEvent.ACTION_MOVE:
-                    Log.i(TAG, "---move: "+xy);
-                    break;
-                case MotionEvent.ACTION_UP:
-                    Log.i(TAG, "---up: "+xy);
-                    break;
-            }
-            return false;
-        }
-    }
+//    class MyOnTouchListener implements View.OnTouchListener{
+//
+//        @Override
+//        public boolean onTouch(View v, MotionEvent event) {
+//           String xy = "x:"+ event.getX()+ "   y:"+event.getX();
+//            switch (event.getAction()){
+//                case MotionEvent.ACTION_DOWN:
+//                    Log.i(TAG, "---down: "+xy);
+//                    break;
+//                case MotionEvent.ACTION_MOVE:
+//                    Log.i(TAG, "---move: "+xy);
+//                    break;
+//                case MotionEvent.ACTION_UP:
+//                    Log.i(TAG, "---up: "+xy);
+//                    break;
+//            }
+//            return false;
+//        }
+//    }
 }
