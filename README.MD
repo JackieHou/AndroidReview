@@ -32,24 +32,81 @@
 
 ### 2 四大组件
 四大组件
->Activity
->BroadcastReceiver
->ContentProvider
->Service
+>Activity        
+>BroadcastReceiver      
+>ContentProvider      
+>Service      
 
 #### 2.1 Activity
 ##### a 启动模式
->Standard
->SingleTop
->SingleTask
->SingleInstance
+>Standard      
+>SingleTop      
+>SingleTask      
+>SingleInstance      
 
 ##### b 启动方式
 
-
 ##### c 生命周期
+onCreate ---> onStart ---> onResume ----> onPause ---> onStop ---> onDestory     onRestart
+![](myfile/img/activity_lifecycle.png)
+
+**两个Activity生命周期**
+1.第二个界面部分遮盖（比如打开一个dialog样式activity）      
+缩进的代表dialog样式的activity  
+```
+onCreate
+onStart
+onResume
+onPause
+   onCreate
+   onStart
+   onResume
+   onPause
+onResum
+   onStop
+   onDestory
+onPause
+onStop
+onDestory
+
+```
+2.第二个界面完全遮盖
+```
+onCreate
+onStart
+onResume
+onPause
+  onCreate
+  onStart
+  onResume
+onStop
+  onPause
+onRestart
+onStart
+onResume
+  onStop
+  onDestory
+onPause
+onStop
+onDestory
+```
+
 
 ##### d 能够传递的类型
+1. 基本数据类型(byte,short,int,long,float,double,char,boolean)
+2. String
+3. List<String>
+4. Bundle
+5. Serilazible
+6. Parcelable
+
+#### 2.2 BroadcastReceiver
+
+
+#### 2.3 ContentProvider
+
+
+#### 2.4 Service
 
 
 ### 3 常用的布局文件

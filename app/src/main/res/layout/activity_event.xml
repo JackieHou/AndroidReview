@@ -18,22 +18,8 @@
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="match_parent" />-->
 
-    <com.qwm.androidreview.eventdemo.MyBlueRelativeLayout
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:gravity="center"
-        android:layout_width="300dp"
-        android:layout_height="200dp">
-
-        <com.qwm.androidreview.eventdemo.MyYellowLinearLayout
-            android:layout_width="200dp"
-            android:layout_height="150dp">
-        </com.qwm.androidreview.eventdemo.MyYellowLinearLayout>
-
-    </com.qwm.androidreview.eventdemo.MyBlueRelativeLayout>
-
     <com.qwm.androidreview.eventdemo.MyGreenLinearLayout
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_width="300dp"
         android:gravity="center"
@@ -50,6 +36,28 @@
         </com.qwm.androidreview.eventdemo.MyYellowLinearLayout>
 
     </com.qwm.androidreview.eventdemo.MyGreenLinearLayout>
+
+
+    <com.qwm.androidreview.eventdemo.MyBlueRelativeLayout
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="200dp">
+
+        <com.qwm.androidreview.eventdemo.MyYellowLinearLayout
+            android:layout_width="200dp"
+            android:layout_height="150dp">
+
+            <com.qwm.androidreview.eventdemo.MyButton
+                android:layout_width="100dp"
+                android:text="測試一把"
+                android:layout_height="50dp" />
+
+        </com.qwm.androidreview.eventdemo.MyYellowLinearLayout>
+
+    </com.qwm.androidreview.eventdemo.MyBlueRelativeLayout>
+
 
 
 </com.qwm.androidreview.eventdemo.BaseRelativeLayout>

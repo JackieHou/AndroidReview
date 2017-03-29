@@ -44,10 +44,11 @@
             android:theme="@style/Theme.AppCompat.DayNight.Dialog" />
         <activity android:name=".activitydemo.Test01Activity" />
         <activity android:name=".activitydemo.Test02Activity" />
-        <activity android:name=".activitydemo.Test03Activity">
+        <activity android:name="com.qwm.androidreview.activitydemo.Test03Activity">
             <intent-filter>
                 <action android:name="com.qwm.androidreview.activitydemo.test"/>
                 <category android:name="com.qwm.androidreview.activitydemo.SHOWACTIVITY"/>
+                <data android:scheme="qwm"/>
             </intent-filter>
         </activity>
 

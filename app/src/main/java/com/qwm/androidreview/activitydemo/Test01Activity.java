@@ -40,7 +40,10 @@ public class Test01Activity extends BaseActivity {
     }
 
     public void onTest3(View view){
-        startActivity(new Intent("com.qwm.androidreview.activitydemo.test"));
+//        Intent intent = new Intent();
+//        intent.setAction("com.qwm.androidreview.activitydemo.test");
+//        intent.addCategory("com.qwm.androidreview.activitydemo.SHOWACTIVITY");
+//        startActivity(intent);
     }
 
     @Override
