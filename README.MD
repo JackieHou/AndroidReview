@@ -101,6 +101,14 @@ onDestory
 6. Parcelable
 
 #### 2.2 BroadcastReceiver
+[Android中的广播Broadcast详解](http://blog.csdn.net/jiangwei0910410003/article/details/19150705)
+[Android：BroadcastRecevicer广播类型汇总](http://blog.csdn.net/carson_ho/article/details/53160580)
+
+**广播的分类**
+>普通广播（不能中断，不能相互传递数据）        
+>有序广播 abortBroadcast      
+>系统广播       
+>本地广播      
 
 
 #### 2.3 ContentProvider

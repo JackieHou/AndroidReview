@@ -20,7 +20,7 @@ public class PhoneReceiver extends BroadcastReceiver {
         if(Intent.ACTION_NEW_OUTGOING_CALL.equals(intent.getAction()) ){
             //打电话
             String phoneNum = intent.getStringExtra(Intent.EXTRA_PHONE_NUMBER);
-            Toast.makeText(context,"",Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,phoneNum,Toast.LENGTH_SHORT).show();
         }else{
             //来电
             handlerCall(context,intent);

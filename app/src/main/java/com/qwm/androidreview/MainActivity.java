@@ -31,6 +31,7 @@ import com.qwm.androidreview.view.MyGridView;
 import com.qwm.androidreview.viewdemo.ViewActivity;
 import com.qwm.androidreview.viewpagerdemo.ViewpagerActivity;
 import com.qwm.androidreview.vollydemo.VolleyActivity;
+import com.qwm.androidreview.windowlearn.WindowLearnActivity;
 import com.qwm.androidreview.xmljsondemo.XmlJsonActivity;
 
 import java.util.ArrayList;
@@ -75,6 +76,7 @@ public class MainActivity extends BaseActivity {
         itemList.add("Bluetooth测试");
         itemList.add("Design Support Library测试");
         itemList.add("Material Design");
+        itemList.add("Window学习");
         contentMgv.setAdapter(new MyGridAdapter(this, itemList));
         contentMgv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -130,6 +132,8 @@ public class MainActivity extends BaseActivity {
                     startActivity(itemStr,DesignSuportDemoActivity.class);
                 }else if ("Material Design".equals(itemStr)) {
                     startActivity(itemStr,MDDemoActivity.class);
+                }else if ("Window学习".equals(itemStr)) {
+                    startActivity(itemStr,WindowLearnActivity.class);
                 }
             }
         });

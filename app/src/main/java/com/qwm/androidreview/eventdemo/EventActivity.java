@@ -19,7 +19,7 @@ public class EventActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event);
+//        setContentView(R.layout.activity_event);
 //        btn = (Button)findViewById(R.id.btn_button);
 //
 //        btn.setOnTouchListener(new MyOnTouchListener());
@@ -30,9 +30,7 @@ public class EventActivity extends BaseActivity {
 //                Log.i(TAG, "onClick: -------");
 //            }
 //        });
-
     }
-
 
 //    class MyOnTouchListener implements View.OnTouchListener{
 //

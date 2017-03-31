@@ -10,6 +10,7 @@
     <!-- 短信 -->
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
 
     <!-- sd卡操作 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -44,11 +45,13 @@
             android:theme="@style/Theme.AppCompat.DayNight.Dialog" />
         <activity android:name=".activitydemo.Test01Activity" />
         <activity android:name=".activitydemo.Test02Activity" />
-        <activity android:name="com.qwm.androidreview.activitydemo.Test03Activity">
+        <activity android:name=".activitydemo.Test03Activity">
             <intent-filter>
-                <action android:name="com.qwm.androidreview.activitydemo.test"/>
-                <category android:name="com.qwm.androidreview.activitydemo.SHOWACTIVITY"/>
-                <data android:scheme="qwm"/>
+                <action android:name="com.qwm.androidreview.activitydemo.test" />
+
+                <category android:name="com.qwm.androidreview.activitydemo.SHOWACTIVITY" />
+
+                <data android:scheme="qwm" />
             </intent-filter>
         </activity>
 
@@ -72,10 +75,17 @@
                 <action android:name="com.qwm.testxm" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".receiverdemo.PhoneReceiver">
+        <receiver
+            android:name=".receiverdemo.PhoneReceiver"
+            android:priority="1000">
             <intent-filter>
                 <action android:name="android.intent.action.PHONE_STATE" />
                 <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiverdemo.SmsReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
 
@@ -185,6 +195,7 @@
         <activity android:name=".materialdesigndemo.MDDemoActivity" />
         <activity android:name=".materialdesigndemo.TouchFeedbackActivity" />
         <activity android:name=".materialdesigndemo.CircularRevealDemoActivity" />
+        <activity android:name=".windowlearn.WindowLearnActivity"></activity>
     </application>
 
 </manifest>
