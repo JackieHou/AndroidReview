@@ -1,12 +1,12 @@
 package com.qwm.androidreview.receiverdemo;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
 import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
+import com.qwm.androidreview.receiverdemo.systemreceiver.SystemReceiverActivity;
 
 public class ReceiverActivity extends BaseActivity {
 
@@ -15,6 +15,20 @@ public class ReceiverActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receiver);
     }
+
+    public void testNormal(View view){
+        startActivity("普通广播测试",NormalReceiverActivity.class);
+    }
+    public void testSystem(View view){
+        startActivity("系统广播测试",SystemReceiverActivity.class);
+    }
+    public void testOrder(View view){
+        startActivity("有序广播测试",OrderReceiverActivity.class);
+    }
+    public void testLocal(View view){
+        startActivity("本地广播测试",LocalReceiverActivity.class);
+    }
+
 
     /**
      * 测试自己定义的广播

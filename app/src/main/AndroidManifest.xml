@@ -60,6 +60,11 @@
         <activity
             android:name=".receiverdemo.ReceiverActivity"
             android:label="广播接收者测试" />
+        <activity android:name=".receiverdemo.NormalReceiverActivity" android:launchMode="singleTop"/>
+        <activity android:name=".receiverdemo.systemreceiver.SystemReceiverActivity" />
+        <activity android:name=".receiverdemo.OrderReceiverActivity" />
+        <activity android:name=".receiverdemo.LocalReceiverActivity"/>
+
 
         <receiver android:name=".receiverdemo.TestReceiver">
             <intent-filter android:priority="1">
@@ -195,7 +200,7 @@
         <activity android:name=".materialdesigndemo.MDDemoActivity" />
         <activity android:name=".materialdesigndemo.TouchFeedbackActivity" />
         <activity android:name=".materialdesigndemo.CircularRevealDemoActivity" />
-        <activity android:name=".windowlearn.WindowLearnActivity"></activity>
+        <activity android:name=".windowlearn.WindowLearnActivity" />
     </application>
 
 </manifest>

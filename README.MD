@@ -91,7 +91,19 @@ onStop
 onDestory
 ```
 
+打开activity的方法
 
+```
+ startActivityForResult()
+ startActivity()
+```
+
+获取放回值的方法
+
+```
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    }
+```
 ##### d 能够传递的类型
 1. 基本数据类型(byte,short,int,long,float,double,char,boolean)
 2. String
@@ -105,10 +117,19 @@ onDestory
 [Android：BroadcastRecevicer广播类型汇总](http://blog.csdn.net/carson_ho/article/details/53160580)
 
 **广播的分类**
->普通广播（不能中断，不能相互传递数据）        
->有序广播 abortBroadcast      
+>普通广播（不能中断，不能相互传递数据）           
 >系统广播       
+>有序广播 abortBroadcast    
 >本地广播      
+
+**广播的定义**
+1. 定义类继承BroadcastReceiver，重写onReceive方法   
+2. 清单文件中声明<receiver>,需要在其中配置<intent-filter>指定接收的广播类型     
+3. 当接收到匹配的广播之后，就会调用onReceive方法     
+4. 有序广播中，如果要控制多个接收者之间的顺序，可在<intent-filter>配置priority属性，系统默认为0，值越大，优先级越      
+5. BroadcastReceiver除了在清单文件中声明，也可以在代码中声明，使用registerReceiver方法注册Receiver     
+
+
 
 
 #### 2.3 ContentProvider
