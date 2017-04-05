@@ -60,11 +60,12 @@
         <activity
             android:name=".receiverdemo.ReceiverActivity"
             android:label="广播接收者测试" />
-        <activity android:name=".receiverdemo.NormalReceiverActivity" android:launchMode="singleTop"/>
+        <activity
+            android:name=".receiverdemo.NormalReceiverActivity"
+            android:launchMode="singleTop" />
         <activity android:name=".receiverdemo.systemreceiver.SystemReceiverActivity" />
         <activity android:name=".receiverdemo.OrderReceiverActivity" />
-        <activity android:name=".receiverdemo.LocalReceiverActivity"/>
-
+        <activity android:name=".receiverdemo.LocalReceiverActivity" />
 
         <receiver android:name=".receiverdemo.TestReceiver">
             <intent-filter android:priority="1">
@@ -91,6 +92,24 @@
         <receiver android:name=".receiverdemo.SmsReceiver">
             <intent-filter android:priority="1000">
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".receiverdemo.systemreceiver.PictureJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <receiver
+            android:name=".receiverdemo.systemreceiver.TakePhotoReceiver">
+            <intent-filter>
+                <action android:name="android.hardware.action.NEW_PICTURE"></action>
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receiverdemo.systemreceiver.TakeVideoReceiver">
+            <intent-filter>
+                <action android:name="android.hardware.action.NEW_VIDEO"></action>
+                <data android:mimeType="video/*" />
             </intent-filter>
         </receiver>
 
@@ -201,6 +220,7 @@
         <activity android:name=".materialdesigndemo.TouchFeedbackActivity" />
         <activity android:name=".materialdesigndemo.CircularRevealDemoActivity" />
         <activity android:name=".windowlearn.WindowLearnActivity" />
+
     </application>
 
 </manifest>

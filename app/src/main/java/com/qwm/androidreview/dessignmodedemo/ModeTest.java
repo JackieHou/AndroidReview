@@ -1,6 +1,5 @@
 package com.qwm.androidreview.dessignmodedemo;
 
-import android.graphics.AvoidXfermode;
 
 /**
  * @author qiwenming
