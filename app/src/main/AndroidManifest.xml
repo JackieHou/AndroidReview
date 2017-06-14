@@ -97,18 +97,24 @@
 
         <service
             android:name=".receiverdemo.systemreceiver.PictureJobService"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
-        <receiver
-            android:name=".receiverdemo.systemreceiver.TakePhotoReceiver">
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"/>
+        <service
+            android:name=".receiverdemo.systemreceiver.VideoJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"/>
+
+        <receiver android:name=".receiverdemo.systemreceiver.TakePhotoReceiver">
             <intent-filter>
-                <action android:name="android.hardware.action.NEW_PICTURE"></action>
+                <action android:name="android.hardware.action.NEW_PICTURE" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
         </receiver>
-        <receiver
-            android:name=".receiverdemo.systemreceiver.TakeVideoReceiver">
+        <receiver android:name=".receiverdemo.systemreceiver.TakeVideoReceiver">
             <intent-filter>
-                <action android:name="android.hardware.action.NEW_VIDEO"></action>
+                <action android:name="android.hardware.action.NEW_VIDEO" />
+
                 <data android:mimeType="video/*" />
             </intent-filter>
         </receiver>
@@ -220,7 +226,11 @@
         <activity android:name=".materialdesigndemo.TouchFeedbackActivity" />
         <activity android:name=".materialdesigndemo.CircularRevealDemoActivity" />
         <activity android:name=".windowlearn.WindowLearnActivity" />
-
+        <activity android:name=".jobschedulerdemo.JobschedulerActivity"></activity>
+        <service
+            android:name=".jobschedulerdemo.MyJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"/>
     </application>
 
 </manifest>

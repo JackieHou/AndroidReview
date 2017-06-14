@@ -15,3 +15,4 @@ public class TakeVideoReceiver extends BroadcastReceiver {
         Log.i(TAG, "onReceive: "+intent.getData());
     }
 }
+

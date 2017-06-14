@@ -10,7 +10,12 @@ import android.widget.TextView;
 
 import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
-
+/**
+ * <b>Project:</b> androidreview<br>
+ * <b>Create Date:</b> 2017/6/13<br>
+ * <b>Author:</b> qiwenming<br>
+ * <b>Description:</b> 普通广播测试 <br>
+ */
 public class NormalReceiverActivity extends BaseActivity {
 
     private TextView tv;

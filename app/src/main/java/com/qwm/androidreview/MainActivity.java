@@ -17,6 +17,7 @@ import com.qwm.androidreview.bluetoothdemo.BluetoothDemoActivity;
 import com.qwm.androidreview.eventdemo.EventActivity;
 import com.qwm.androidreview.filestoragedemo.FileStorageActivity;
 import com.qwm.androidreview.fragmentdemo.FragmentDemoActivity;
+import com.qwm.androidreview.jobschedulerdemo.JobschedulerActivity;
 import com.qwm.androidreview.listazdemo.ListViewAZDemoctivity;
 import com.qwm.androidreview.listviewdemo.ListViewActivity;
 import com.qwm.androidreview.materialdesigndemo.MDDemoActivity;
@@ -77,6 +78,7 @@ public class MainActivity extends BaseActivity {
         itemList.add("Design Support Library测试");
         itemList.add("Material Design");
         itemList.add("Window学习");
+        itemList.add("Jobscheduler学习");
         contentMgv.setAdapter(new MyGridAdapter(this, itemList));
         contentMgv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -134,6 +136,8 @@ public class MainActivity extends BaseActivity {
                     startActivity(itemStr,MDDemoActivity.class);
                 }else if ("Window学习".equals(itemStr)) {
                     startActivity(itemStr,WindowLearnActivity.class);
+                }else if ("Jobscheduler学习".equals(itemStr)) {
+                    startActivity(itemStr,JobschedulerActivity.class);
                 }
             }
         });
