@@ -129,9 +129,9 @@ onDestory
 4. 有序广播中，如果要控制多个接收者之间的顺序，可在<intent-filter>配置priority属性，系统默认为0，值越大，优先级越      
 5. BroadcastReceiver除了在清单文件中声明，也可以在代码中声明，使用registerReceiver方法注册Receiver     
 
+[Changes to system broadcasts(7.1)](NewCharacteristics/7.0.md)
 
-
-[JobScheduler 任务调度](NewCharacteristics/5.0.md)
+[JobScheduler 任务调度(5.0)](NewCharacteristics/5.0.md)
 
 #### 2.3 ContentProvider
 
