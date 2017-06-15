@@ -133,6 +133,30 @@ onDestory
 
 [JobScheduler 任务调度(5.0)](NewCharacteristics/5.0.md)
 
+##### 2.2.1 有序广播
+**发送有序广播**     
+>a.sendOrderedBroadcast() 发送有序广播；       
+b.通过Intent确定广播类型, 携带数据，Intent的数据同样修改无效；       
+c.跟普通广播一样，也可以设置相应的权限；       
+d.接收者可在<intent-filter>定义android:priority定义优先级，数字越大，优先级越高；       
+e.有序广播会被接收者逐个接收，中途可以中断，或添加、修改数据；       
+f.可以指定一个自己的广播接收者, 这个接收者将最后一个收到广播、不会被中断、不需要任何权限、不需要配置；       
+g.可以指定一个Handler用来在自己的接收者中进行线程通信；       
+
+Intent的数据不可一修改，但是我们能够通过 **setResultExtras(bundle)** 和 **Bundle bundle = getResultExtras(false);**来传递的数据可以呀改变的
+例如
+
+[OrderReceiverActivity.java](app/src/main/java/com/qwm/androidreview/receiverdemo/orderreceiver/OrderReceiverActivity.java)     
+[OrderTest01Receiver.java](app/src/main/java/com/qwm/androidreview/receiverdemo/orderreceiver/OrderTest01Receiver.java)     
+[OrderTest02Receiver.java](app/src/main/java/com/qwm/androidreview/receiverdemo/orderreceiver/OrderTest02Receiver.java)     
+[OrderTest03Receiver.java](app/src/main/java/com/qwm/androidreview/receiverdemo/orderreceiver/OrderTest03Receiver.java)     
+
+##### 2.2.2 本地广播
+
+[LocalBroadcastManager—创建更高效、更安全的广播](http://blog.csdn.net/u010687392/article/details/49744579#comments)
+
+----
+
 #### 2.3 ContentProvider
 
 

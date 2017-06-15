@@ -64,8 +64,8 @@
             android:name=".receiverdemo.NormalReceiverActivity"
             android:launchMode="singleTop" />
         <activity android:name=".receiverdemo.systemreceiver.SystemReceiverActivity" />
-        <activity android:name=".receiverdemo.OrderReceiverActivity" />
-        <activity android:name=".receiverdemo.LocalReceiverActivity" />
+        <activity android:name=".receiverdemo.orderreceiver.OrderReceiverActivity" />
+        <activity android:name=".receiverdemo.localreceiver.LocalReceiverActivity" />
 
         <receiver android:name=".receiverdemo.TestReceiver">
             <intent-filter android:priority="1">
@@ -116,6 +116,24 @@
                 <action android:name="android.hardware.action.NEW_VIDEO" />
 
                 <data android:mimeType="video/*" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receiverdemo.orderreceiver.OrderTest01Receiver">
+            <intent-filter android:priority="1000">
+                <action android:name="com.qwm.ordertest1"></action>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receiverdemo.orderreceiver.OrderTest02Receiver">
+            <intent-filter android:priority="500">
+                <action android:name="com.qwm.ordertest1"></action>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receiverdemo.orderreceiver.OrderTest03Receiver">
+            <intent-filter android:priority="200">
+                <action android:name="com.qwm.ordertest1"></action>
             </intent-filter>
         </receiver>
 

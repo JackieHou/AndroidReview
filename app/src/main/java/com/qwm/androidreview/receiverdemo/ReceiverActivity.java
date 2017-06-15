@@ -6,6 +6,8 @@ import android.view.View;
 
 import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
+import com.qwm.androidreview.receiverdemo.localreceiver.LocalReceiverActivity;
+import com.qwm.androidreview.receiverdemo.orderreceiver.OrderReceiverActivity;
 import com.qwm.androidreview.receiverdemo.systemreceiver.SystemReceiverActivity;
 
 public class ReceiverActivity extends BaseActivity {

@@ -10,5 +10,6 @@ public class MyAction {
     public static String MY_ACTION_NORMAL = "com.qwm.normal";
     public static String MY_ACTION_TEST = "com.qwm.test";
     public static String MY_ACTION_TESTXM = "com.qwm.testxm";
+    public static String MY_ACTION_ORDERTEST1 = "com.qwm.ordertest1";
     public static String MY_ACTION_LOCAL = "com.qwm.local";
 }
