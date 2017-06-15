@@ -159,8 +159,38 @@ Intent的数据不可一修改，但是我们能够通过 **setResultExtras(bund
 
 #### 2.3 ContentProvider
 
+[SQLite](#sqlite)
 
 #### 2.4 Service
 
 
 ### 3 常用的布局文件
+
+
+
+
+## 三、数据的存储
+[存储选项](https://developer.android.google.cn/guide/topics/data/data-storage.html)
+数据的存储主要分为5大类
+> 1. SharedPreferences   
+  2. Internal Storage(内部存储)
+  3. External Storage(外部存储)
+  4. SQLite Databases(sqlite数据库)
+  5. Network Connection(网络)
+  
+  
+### 3.1 SharedPreferences  
+
+
+
+### 3.2 Internal Storage(内部存储)  
+
+
+### 3.3 External Storage(外部存储)  
+
+
+### 3.4 SQLite Databases(sqlite数据库)<a name="sqlite"></a>  
+
+
+### 3.5 Network Connection(网络)   
+ 
