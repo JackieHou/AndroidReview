@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 
 import com.qwm.androidreview.animodemo.AnimoActivity;
+import com.qwm.androidreview.datastoragedemo.DataStorageActivity;
 import com.qwm.androidreview.designdemo.DesignSuportDemoActivity;
 import com.qwm.androidreview.activitydemo.Test01Activity;
 import com.qwm.androidreview.activityservicedemo.ActivityServiceActivity;
@@ -111,7 +112,7 @@ public class MainActivity extends BaseActivity {
                 } else if ("view".equals(itemStr)) {
                     startActivity(itemStr,ViewActivity.class);
                 } else if ("数据存储".equals(itemStr)) {
-                    startActivity(itemStr,FileStorageActivity.class);
+                    startActivity(itemStr,DataStorageActivity.class);
                 }else if ("Xml和Json".equals(itemStr)) {
                     startActivity(itemStr,XmlJsonActivity.class);
                 }else if ("异步测试".equals(itemStr)) {

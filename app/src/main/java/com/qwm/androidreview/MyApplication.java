@@ -11,13 +11,18 @@ import java.io.File;
  * Created by wiming on 2016/4/27.
  */
 public class MyApplication extends Application {
-
+    private static MyApplication mInstance;
     @Override
     public void onCreate() {
         super.onCreate();
-
+        mInstance = this;
         //picasso的缓存设置
 //        loadImageCache();
+    }
+
+
+    public static MyApplication getIntance(){
+        return mInstance;
     }
 
 

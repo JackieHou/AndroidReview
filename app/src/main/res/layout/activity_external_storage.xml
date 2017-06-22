@@ -2,49 +2,39 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.qwm.androidreview.MainActivity">
-
-<!--    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    android:orientation="vertical"
+    tools:context="com.qwm.androidreview.datastoragedemo.sharedpreferences.SharedPreferencesActivity">
 
     <Button
-        android:text="测试一把"
-        android:onClick="onTest"
+        android:text="api提供的位置"
+        android:onClick="onStoragelocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
     <Button
-        android:text="广播接受者测试"
-        android:onClick="onTestReceiver"
+        android:text="存入"
+        android:onClick="onStorage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-    <Button
-        android:text="内容提供者测试"
-        android:onClick="onTestProvider"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />-->
 
+    <Button
+        android:text="取出"
+        android:onClick="onGet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <com.qwm.androidreview.view.MyGridView
-            android:numColumns="3"
-            android:id="@+id/mgv_content"
-            android:verticalSpacing="5dp"
-            android:horizontalSpacing="5dp"
+        <TextView
+            android:id="@+id/textview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"></com.qwm.androidreview.view.MyGridView>
-
+            android:layout_height="match_parent" />
     </ScrollView>
-
 
 </LinearLayout>

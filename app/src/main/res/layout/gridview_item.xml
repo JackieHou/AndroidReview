@@ -6,8 +6,6 @@
 
     <TextView
         android:background="@drawable/btn_gv_item_bg_selector"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp"
         android:textColor="@drawable/btn_gv_item_txt_selector"
         android:gravity="center"
         android:text="明爷"

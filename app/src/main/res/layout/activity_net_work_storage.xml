@@ -7,15 +7,6 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.qwm.androidreview.materialdesigndemo.MDDemoActivity">
-
-    <com.qwm.androidreview.view.MyGridView
-        android:numColumns="3"
-        android:id="@+id/mgv_content"
-        android:verticalSpacing="5dp"
-        android:horizontalSpacing="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></com.qwm.androidreview.view.MyGridView>
-w>
+    tools:context="com.qwm.androidreview.datastoragedemo.networkstorage.NetWorkStorageActivity">
 
 </RelativeLayout>

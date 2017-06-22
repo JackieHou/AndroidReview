@@ -97,12 +97,12 @@
 
         <service
             android:name=".receiverdemo.systemreceiver.PictureJobService"
-            android:permission="android.permission.BIND_JOB_SERVICE"
-            android:exported="true"/>
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
         <service
             android:name=".receiverdemo.systemreceiver.VideoJobService"
-            android:permission="android.permission.BIND_JOB_SERVICE"
-            android:exported="true"/>
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <receiver android:name=".receiverdemo.systemreceiver.TakePhotoReceiver">
             <intent-filter>
@@ -118,22 +118,19 @@
                 <data android:mimeType="video/*" />
             </intent-filter>
         </receiver>
-
         <receiver android:name=".receiverdemo.orderreceiver.OrderTest01Receiver">
             <intent-filter android:priority="1000">
-                <action android:name="com.qwm.ordertest1"></action>
+                <action android:name="com.qwm.ordertest1" />
             </intent-filter>
         </receiver>
-
         <receiver android:name=".receiverdemo.orderreceiver.OrderTest02Receiver">
             <intent-filter android:priority="500">
-                <action android:name="com.qwm.ordertest1"></action>
+                <action android:name="com.qwm.ordertest1" />
             </intent-filter>
         </receiver>
-
         <receiver android:name=".receiverdemo.orderreceiver.OrderTest03Receiver">
             <intent-filter android:priority="200">
-                <action android:name="com.qwm.ordertest1"></action>
+                <action android:name="com.qwm.ordertest1" />
             </intent-filter>
         </receiver>
 
@@ -244,11 +241,20 @@
         <activity android:name=".materialdesigndemo.TouchFeedbackActivity" />
         <activity android:name=".materialdesigndemo.CircularRevealDemoActivity" />
         <activity android:name=".windowlearn.WindowLearnActivity" />
-        <activity android:name=".jobschedulerdemo.JobschedulerActivity"></activity>
+        <activity android:name=".jobschedulerdemo.JobschedulerActivity" />
+
         <service
             android:name=".jobschedulerdemo.MyJobService"
-            android:permission="android.permission.BIND_JOB_SERVICE"
-            android:exported="true"/>
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity android:name=".datastoragedemo.DataStorageActivity" />
+        <activity android:name=".datastoragedemo.sharedpreferences.SharedPreferencesActivity" />
+        <activity android:name=".datastoragedemo.sqlitestorage.SqliteStorageActivity" />
+        <activity android:name=".datastoragedemo.networkstorage.NetWorkStorageActivity" />
+        <activity android:name=".datastoragedemo.internalstorage.InternalStorageActivity" />
+        <activity android:name=".datastoragedemo.externalstorage.ExternalStorageActivity" />
+        <activity android:name=".datastoragedemo.contentprovider.CententProviderStorageActivity"></activity>
     </application>
 
 </manifest>
