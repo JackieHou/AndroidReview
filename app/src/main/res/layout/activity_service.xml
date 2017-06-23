@@ -11,12 +11,14 @@
     tools:context="com.qwm.androidreview.servicedemo.ServiceActivity">
 
     <Button
+        android:textAllCaps="false"
         android:onClick="testStartService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="testStartService(开启服务)" />
 
     <Button
+        android:textAllCaps="false"
         android:onClick="onStopService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,12 +28,14 @@
         android:onClick="testBindService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="testBindService(绑定服务)" />
 
     <Button
         android:onClick="testUnBindService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="testUnBindService(解绑服务)" />
     <Button
         android:onClick="getData"

@@ -29,6 +29,7 @@ import com.qwm.androidreview.providerdemo.ProviderDemoActivity;
 import com.qwm.androidreview.receiverdemo.ReceiverActivity;
 import com.qwm.androidreview.screendemo.ScreenActivity;
 import com.qwm.androidreview.servicedemo.ServiceActivity;
+import com.qwm.androidreview.servicedemo.ServiceDemoActivity;
 import com.qwm.androidreview.shapedemo.ShapeDemoActivity;
 import com.qwm.androidreview.view.MyGridView;
 import com.qwm.androidreview.viewdemo.ViewActivity;
@@ -93,7 +94,7 @@ public class MainActivity extends BaseActivity {
                 } else if ("内容提供者测试".equals(itemStr)) {
                     startActivity(itemStr,ProviderDemoActivity.class);
                 } else if ("Service测试".equals(itemStr)) {
-                    startActivity(itemStr,ServiceActivity.class);
+                    startActivity(itemStr,ServiceDemoActivity.class);
                 }else if ("Service和Activity".equals(itemStr)) {
                     startActivity(itemStr,ActivityServiceActivity.class);
                 } else if ("ListView测试".equals(itemStr)) {

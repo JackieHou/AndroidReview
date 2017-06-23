@@ -7,9 +7,9 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
 
-    <!--联系人-->
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
-    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <!-- 联系人 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
 
     <!-- 短信 -->
     <uses-permission android:name="android.permission.READ_SMS" />
@@ -149,10 +149,9 @@
         <activity
             android:name=".providerdemo.ProviderActivity"
             android:label="内容提供者测试" />
-
         <activity android:name=".providerdemo.ProviderDemoActivity" />
         <activity android:name=".providerdemo.system.ProvideSystemActivity" />
-        <activity android:name=".providerdemo.myself.ProviderMySelfActivity"></activity>
+        <activity android:name=".providerdemo.myself.ProviderMySelfActivity" />
 
         <!-- ===============================Service 测试-================================================================ -->
         <activity
@@ -197,6 +196,8 @@
             </intent-filter>
         </service>
 
+        <activity android:name=".servicedemo.ServiceDemoActivity" />
+        <activity android:name=".servicedemo.IntentServiceActivity" />
         <activity
             android:name=".listviewdemo.ListViewActivity"
             android:label="ListViewActivity" />
@@ -266,6 +267,7 @@
         <activity android:name=".datastoragedemo.internalstorage.InternalStorageActivity" />
         <activity android:name=".datastoragedemo.externalstorage.ExternalStorageActivity" />
         <activity android:name=".datastoragedemo.contentprovider.CententProviderStorageActivity" />
+        <activity android:name=".servicedemo.SeriveInteractiveActivity"></activity>
     </application>
 
 </manifest>

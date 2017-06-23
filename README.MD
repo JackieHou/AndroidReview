@@ -168,6 +168,39 @@ Intent的数据不可一修改，但是我们能够通过 **setResultExtras(bund
 
 
 #### 2.4 Service
+[服务](https://developer.android.google.cn/guide/components/services.html)
+
+服务基本上分为两种形式：
+
+1. 启动
+>当应用组件（如 Activity）通过调用 startService() 启动服务时，服务即处于“启动”状态。一旦启动，
+服务即可在后台无限期运行，即使启动服务的组件已被销毁也不受影响。 已启动的服务通常是执行单一操作，
+而且不会将结果返回给调用方。例如，它可能通过网络下载或上传文件。 操作完成后，服务会自行停止运行。
+
+2. 绑定
+>当应用组件通过调用 bindService() 绑定到服务时，服务即处于“绑定”状态。绑定服务提供了一个客户端-服务器接口，
+允许组件与服务进行交互、发送请求、获取结果，甚至是利用进程间通信 (IPC) 跨进程执行这些操作。 
+仅当与另一个应用组件绑定时，绑定服务才会运行。 多个组件可以同时绑定到该服务，但全部取消绑定后，该服务即会被销毁。
+
+从传统上讲，您可以扩展两个类来创建启动服务：
+
+Service
+> 这是适用于所有服务的基类。扩展此类时，必须创建一个用于执行所有服务工作的新线程，因为默认情况下，服务将使用应用的主线程，这会降低应用正在运行的所有 Activity 的性能。
+
+IntentService
+> 这是 Service 的子类，它使用工作线程逐一处理所有启动请求。如果您不要求服务同时处理多个请求，这是最好的选择。 您只需实现 onHandleIntent() 方法即可，该方法会接收每个启动请求的 Intent，使您能够执行后台工作。
+
+
+![](myfile/img/service_lifecycle.png)       
+**图2.4.1 服务生命周期。**           
+左图显示了使用 startService() 所创建的服务的生命周期，右图显示了使用 bindService() 所创建的服务的生命周期。
+
+start方式生命周期：onCreate --> onStartCommand ---> onDestory  
+bind 方式生命周期：onCreate --> onBind ---> onUnBind --->onDestory
+
+![](myfile/img/service_binding_tree_lifecycle.png)   
+**图2.4.2 允许绑定的已启动服务的生命周期。**  
+
 
 
 ### 3 常用的布局文件
