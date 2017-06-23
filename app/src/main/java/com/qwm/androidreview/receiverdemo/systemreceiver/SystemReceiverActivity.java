@@ -72,7 +72,9 @@ public class SystemReceiverActivity extends BaseActivity {
 
     @Override
     protected void onDestroy() {
-        stopService(new Intent(this,PictureJobService.class));
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+            stopService(new Intent(this,PictureJobService.class));
+        }
         super.onDestroy();
     }
 }

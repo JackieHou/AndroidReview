@@ -161,6 +161,12 @@ Intent的数据不可一修改，但是我们能够通过 **setResultExtras(bund
 
 [SQLite](#sqlite)
 
+[android四大组件--ContentProvider详解](http://www.2cto.com/kf/201404/296974.html)
+
+[ProviderMySelfActivity.java](app/src/main/java/com/qwm/androidreview/providerdemo/myself/ProviderMySelfActivity.java)     
+[PersonProvider2.java](app/src/main/java/com/qwm/androidreview/providerdemo/myself/PersonProvider2.java)
+
+
 #### 2.4 Service
 
 

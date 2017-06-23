@@ -25,6 +25,7 @@ import com.qwm.androidreview.materialdesigndemo.MDDemoActivity;
 import com.qwm.androidreview.picassodemo.PicassoDemoActivity;
 import com.qwm.androidreview.pictureoomdemo.PictureOOMActivity;
 import com.qwm.androidreview.providerdemo.ProviderActivity;
+import com.qwm.androidreview.providerdemo.ProviderDemoActivity;
 import com.qwm.androidreview.receiverdemo.ReceiverActivity;
 import com.qwm.androidreview.screendemo.ScreenActivity;
 import com.qwm.androidreview.servicedemo.ServiceActivity;
@@ -87,16 +88,12 @@ public class MainActivity extends BaseActivity {
                 String itemStr = itemList.get(position);
                 if ("Activity测试".equals(itemStr)) {
                     startActivity(itemStr,Test01Activity.class);
-//                    onTest(null);
                 } else if ("广播接受者测试".equals(itemStr)) {
                     startActivity(itemStr,ReceiverActivity.class);
-//                    onTestReceiver(null);
                 } else if ("内容提供者测试".equals(itemStr)) {
-                    startActivity(itemStr,ProviderActivity.class);
-                    onTestProvider(null);
+                    startActivity(itemStr,ProviderDemoActivity.class);
                 } else if ("Service测试".equals(itemStr)) {
                     startActivity(itemStr,ServiceActivity.class);
-                    onTestService();
                 }else if ("Service和Activity".equals(itemStr)) {
                     startActivity(itemStr,ActivityServiceActivity.class);
                 } else if ("ListView测试".equals(itemStr)) {
