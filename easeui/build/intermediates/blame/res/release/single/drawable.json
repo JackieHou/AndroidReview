@@ -96,12 +96,12 @@
         "source": "E:\\learn\\AndroidReview01\\easeui\\src\\main\\res\\drawable\\ease_btn_blue_selector.xml"
     },
     {
-        "merged": "E:\\learn\\AndroidReview01\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\voice_from_icon.xml",
-        "source": "E:\\learn\\AndroidReview01\\easeui\\src\\main\\res\\drawable\\voice_from_icon.xml"
-    },
-    {
         "merged": "E:\\learn\\AndroidReview01\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\voice_to_icon.xml",
         "source": "E:\\learn\\AndroidReview01\\easeui\\src\\main\\res\\drawable\\voice_to_icon.xml"
+    },
+    {
+        "merged": "E:\\learn\\AndroidReview01\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\voice_from_icon.xml",
+        "source": "E:\\learn\\AndroidReview01\\easeui\\src\\main\\res\\drawable\\voice_from_icon.xml"
     },
     {
         "merged": "E:\\learn\\AndroidReview01\\easeui\\build\\intermediates\\res\\merged\\release\\drawable\\ease_btn_cancel_pressed_shape.xml",

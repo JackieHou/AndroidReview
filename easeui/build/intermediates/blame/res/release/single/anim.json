@@ -16,16 +16,16 @@
         "source": "E:\\learn\\AndroidReview01\\easeui\\src\\main\\res\\anim\\push_top_in2.xml"
     },
     {
-        "merged": "E:\\learn\\AndroidReview01\\easeui\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_in.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\a5f16620972c4a77d082b66e0aa78b7cdd9f8995\\output\\res\\anim\\abc_fade_in.xml"
+        "merged": "E:\\learn\\AndroidReview01\\easeui\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\a5f16620972c4a77d082b66e0aa78b7cdd9f8995\\output\\res\\anim\\abc_popup_enter.xml"
     },
     {
         "merged": "E:\\learn\\AndroidReview01\\easeui\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_exit.xml",
         "source": "C:\\Users\\Administrator\\.android\\build-cache\\a5f16620972c4a77d082b66e0aa78b7cdd9f8995\\output\\res\\anim\\abc_popup_exit.xml"
     },
     {
-        "merged": "E:\\learn\\AndroidReview01\\easeui\\build\\intermediates\\res\\merged\\release\\anim\\abc_popup_enter.xml",
-        "source": "C:\\Users\\Administrator\\.android\\build-cache\\a5f16620972c4a77d082b66e0aa78b7cdd9f8995\\output\\res\\anim\\abc_popup_enter.xml"
+        "merged": "E:\\learn\\AndroidReview01\\easeui\\build\\intermediates\\res\\merged\\release\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Administrator\\.android\\build-cache\\a5f16620972c4a77d082b66e0aa78b7cdd9f8995\\output\\res\\anim\\abc_fade_in.xml"
     },
     {
         "merged": "E:\\learn\\AndroidReview01\\easeui\\build\\intermediates\\res\\merged\\release\\anim\\hold.xml",

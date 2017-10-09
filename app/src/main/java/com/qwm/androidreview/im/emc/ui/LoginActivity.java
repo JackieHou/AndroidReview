@@ -26,6 +26,7 @@ import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 import com.qwm.androidreview.BaseActivity;
 import com.qwm.androidreview.R;
+import com.qwm.androidreview.im.emc.EMCActivity;
 
 /**
  * Login screen
@@ -43,6 +44,7 @@ public class LoginActivity extends BaseActivity {
 		setContentView(R.layout.em_activity_login);
 		mName_edt = (EditText) findViewById(R.id.username);
 		mPwd_edt = (EditText) findViewById(R.id.password);
+
 	}
 
 	/**
@@ -86,6 +88,8 @@ public class LoginActivity extends BaseActivity {
 					@Override
 					public void run() {
 						Toast.makeText(getApplicationContext(), "登录成功", Toast.LENGTH_SHORT).show();
+						//打开主界面
+						startActivity("环信", EMCActivity.class);
 					}
 				});
 				finish();

@@ -18,6 +18,10 @@ public class IMActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.em_activity_main);
+        setContentView(R.layout.activity_im);
+    }
+
+    public void clickEMC(View view){
+        startActivity("登录",LoginActivity.class);
     }
 }

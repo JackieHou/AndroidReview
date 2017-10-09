@@ -34,7 +34,6 @@ public class EaseAtMessageHelper {
         atMeGroupList = EasePreferenceManager.getInstance().getAtMeGroups();
         if(atMeGroupList == null)
             atMeGroupList = new HashSet<String>();
-        
     }
     
     /**

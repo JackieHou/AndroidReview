@@ -41,6 +41,7 @@
                 android:src="@mipmap/em_icon_account" />
 
             <EditText
+                android:text="q1"
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -73,6 +74,7 @@
                 android:src="@mipmap/em_icon_pwd" />
 
             <EditText
+                android:text="q1"
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
