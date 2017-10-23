@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.qwm.androidreview">
+          package="com.qwm.androidreview">
 
-    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.GET_TASKS"/>
     <!-- 电话 -->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
 
     <!-- 联系人 -->
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
 
     <!-- 短信 -->
-    <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.WRITE_SMS" />
-    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
 
     <!-- sd卡操作 -->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <!-- 网络 -->
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <!-- 蓝牙 -->
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
 
-    <!--IM EMC（环信）-->
-    <!--================================================================-->
+    <!-- IM EMC（环信） -->
+    <!-- ================================================================ -->
     <!-- Required -->
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <application
         android:name=".MyApplication"
@@ -53,9 +53,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
@@ -63,16 +63,16 @@
 
         <activity
             android:name=".activitydemo.DialogActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.Dialog" />
-        <activity android:name=".activitydemo.Test01Activity" />
-        <activity android:name=".activitydemo.Test02Activity" />
+            android:theme="@style/Theme.AppCompat.DayNight.Dialog"/>
+        <activity android:name=".activitydemo.Test01Activity"/>
+        <activity android:name=".activitydemo.Test02Activity"/>
         <activity android:name=".activitydemo.Test03Activity">
             <intent-filter>
-                <action android:name="com.qwm.androidreview.activitydemo.test" />
+                <action android:name="com.qwm.androidreview.activitydemo.test"/>
 
-                <category android:name="com.qwm.androidreview.activitydemo.SHOWACTIVITY" />
+                <category android:name="com.qwm.androidreview.activitydemo.SHOWACTIVITY"/>
 
-                <data android:scheme="qwm" />
+                <data android:scheme="qwm"/>
             </intent-filter>
         </activity>
 
@@ -80,18 +80,18 @@
         <!-- 广播接收者 测试 -->
         <activity
             android:name=".receiverdemo.ReceiverActivity"
-            android:label="广播接收者测试" />
+            android:label="广播接收者测试"/>
         <activity
             android:name=".receiverdemo.NormalReceiverActivity"
-            android:launchMode="singleTop" />
-        <activity android:name=".receiverdemo.systemreceiver.SystemReceiverActivity" />
-        <activity android:name=".receiverdemo.orderreceiver.OrderReceiverActivity" />
-        <activity android:name=".receiverdemo.localreceiver.LocalReceiverActivity" />
+            android:launchMode="singleTop"/>
+        <activity android:name=".receiverdemo.systemreceiver.SystemReceiverActivity"/>
+        <activity android:name=".receiverdemo.orderreceiver.OrderReceiverActivity"/>
+        <activity android:name=".receiverdemo.localreceiver.LocalReceiverActivity"/>
 
         <receiver android:name=".receiverdemo.TestReceiver">
             <intent-filter android:priority="1">
-                <action android:name="com.qwm.test" />
-                <action android:name="com.qwm.testxm" />
+                <action android:name="com.qwm.test"/>
+                <action android:name="com.qwm.testxm"/>
             </intent-filter>
         </receiver>
         <receiver
@@ -99,109 +99,109 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter android:priority="999">
-                <action android:name="com.qwm.testxm" />
+                <action android:name="com.qwm.testxm"/>
             </intent-filter>
         </receiver>
         <receiver
             android:name=".receiverdemo.PhoneReceiver"
             android:priority="1000">
             <intent-filter>
-                <action android:name="android.intent.action.PHONE_STATE" />
-                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+                <action android:name="android.intent.action.PHONE_STATE"/>
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
             </intent-filter>
         </receiver>
         <receiver android:name=".receiverdemo.SmsReceiver">
             <intent-filter android:priority="1000">
-                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
             </intent-filter>
         </receiver>
 
         <service
             android:name=".receiverdemo.systemreceiver.PictureJobService"
             android:exported="true"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
         <service
             android:name=".receiverdemo.systemreceiver.VideoJobService"
             android:exported="true"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
 
         <receiver android:name=".receiverdemo.systemreceiver.TakePhotoReceiver">
             <intent-filter>
-                <action android:name="android.hardware.action.NEW_PICTURE" />
+                <action android:name="android.hardware.action.NEW_PICTURE"/>
 
-                <data android:mimeType="image/*" />
+                <data android:mimeType="image/*"/>
             </intent-filter>
         </receiver>
         <receiver android:name=".receiverdemo.systemreceiver.TakeVideoReceiver">
             <intent-filter>
-                <action android:name="android.hardware.action.NEW_VIDEO" />
+                <action android:name="android.hardware.action.NEW_VIDEO"/>
 
-                <data android:mimeType="video/*" />
+                <data android:mimeType="video/*"/>
             </intent-filter>
         </receiver>
         <receiver android:name=".receiverdemo.orderreceiver.OrderTest01Receiver">
             <intent-filter android:priority="1000">
-                <action android:name="com.qwm.ordertest1" />
+                <action android:name="com.qwm.ordertest1"/>
             </intent-filter>
         </receiver>
         <receiver android:name=".receiverdemo.orderreceiver.OrderTest02Receiver">
             <intent-filter android:priority="500">
-                <action android:name="com.qwm.ordertest1" />
+                <action android:name="com.qwm.ordertest1"/>
             </intent-filter>
         </receiver>
         <receiver android:name=".receiverdemo.orderreceiver.OrderTest03Receiver">
             <intent-filter android:priority="200">
-                <action android:name="com.qwm.ordertest1" />
+                <action android:name="com.qwm.ordertest1"/>
             </intent-filter>
         </receiver>
 
         <!-- ===============================内容提供者 测试-================================================================ -->
         <provider
             android:name=".providerdemo.PersonProvider"
-            android:authorities="com.qwm.person" />
+            android:authorities="com.qwm.person"/>
         <provider
             android:name=".providerdemo.myself.PersonProvider2"
-            android:authorities="com.qwm.androidreview.providerdemo.myself.PersonProvider2" />
+            android:authorities="com.qwm.androidreview.providerdemo.myself.PersonProvider2"/>
 
         <activity
             android:name=".providerdemo.ProviderActivity"
-            android:label="内容提供者测试" />
-        <activity android:name=".providerdemo.ProviderDemoActivity" />
-        <activity android:name=".providerdemo.system.ProvideSystemActivity" />
-        <activity android:name=".providerdemo.myself.ProviderMySelfActivity" />
+            android:label="内容提供者测试"/>
+        <activity android:name=".providerdemo.ProviderDemoActivity"/>
+        <activity android:name=".providerdemo.system.ProvideSystemActivity"/>
+        <activity android:name=".providerdemo.myself.ProviderMySelfActivity"/>
 
         <!-- ===============================Service 测试-================================================================ -->
         <activity
             android:name=".servicedemo.ServiceActivity"
-            android:label="Service测试" />
+            android:label="Service测试"/>
 
-        <service android:name=".servicedemo.MyService" />
+        <service android:name=".servicedemo.MyService"/>
         <service android:name=".servicedemo.AIDLService">
             <intent-filter>
-                <action android:name="com.qwm.aidl" />
+                <action android:name="com.qwm.aidl"/>
             </intent-filter>
         </service>
         <!-- ===============================Activity和Service 测试-================================================================ -->
-        <activity android:name=".activityservicedemo.ActivityServiceActivity" />
+        <activity android:name=".activityservicedemo.ActivityServiceActivity"/>
 
         <service
             android:name=".activityservicedemo.MyTestService"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"/>
         <service
             android:name=".activityservicedemo.MyShareService"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"/>
         <service
             android:name=".activityservicedemo.MyMessengerService"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"/>
         <service
             android:name=".activityservicedemo.MyInterfaceService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.qwm.servictestinterface" />
+                <action android:name="com.qwm.servictestinterface"/>
             </intent-filter>
         </service>
         <service
@@ -209,106 +209,114 @@
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="com.qwm.servictestaidl" />
+                <action android:name="com.qwm.servictestaidl"/>
             </intent-filter>
         </service>
 
-        <activity android:name=".servicedemo.ServiceDemoActivity" />
-        <activity android:name=".servicedemo.IntentServiceActivity" />
+        <activity android:name=".servicedemo.ServiceDemoActivity"/>
+        <activity android:name=".servicedemo.IntentServiceActivity"/>
         <activity
             android:name=".listviewdemo.ListViewActivity"
-            android:label="ListViewActivity" />
+            android:label="ListViewActivity"/>
         <activity
             android:name=".referencedemo.ReferenceActivity"
-            android:label="ReferenceActivity" />
+            android:label="ReferenceActivity"/>
         <activity
             android:name=".pictureoomdemo.PictureOOMActivity"
-            android:label="PictureOOMActivity" />
+            android:label="PictureOOMActivity"/>
         <activity
             android:name=".animodemo.AnimoActivity"
-            android:label="AnimoActivity" />
+            android:label="AnimoActivity"/>
         <activity
             android:name=".animodemo.TweenAnimActivity"
-            android:label="TweenAnimActivity" />
+            android:label="TweenAnimActivity"/>
         <activity
             android:name=".animodemo.PropertyAnimActivity"
-            android:label="PropertyAnimActivity" />
+            android:label="PropertyAnimActivity"/>
         <activity
             android:name=".animodemo.FrameAnimActivity"
-            android:label="FrameAnimActivity" />
+            android:label="FrameAnimActivity"/>
         <activity
             android:name=".shapedemo.ShapeDemoActivity"
-            android:label="ShapeDemoActivity" />
+            android:label="ShapeDemoActivity"/>
         <activity
             android:name=".screendemo.ScreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="ScreenActivity" />
-        <activity android:name=".viewdemo.CirclePhotoActivity" />
-        <activity android:name=".viewdemo.ViewActivity" />
-        <activity android:name=".listviewdemo.ListGridActivity" />
-        <activity android:name=".listviewdemo.GridViewActivity" />
-        <activity android:name=".filestoragedemo.FileStorageActivity" />
+            android:label="ScreenActivity"/>
+        <activity android:name=".viewdemo.CirclePhotoActivity"/>
+        <activity android:name=".viewdemo.ViewActivity"/>
+        <activity android:name=".listviewdemo.ListGridActivity"/>
+        <activity android:name=".listviewdemo.GridViewActivity"/>
+        <activity android:name=".filestoragedemo.FileStorageActivity"/>
 
         <provider
             android:name=".filestoragedemo.MySqliteContentProvider"
             android:authorities="com.qwm.storage"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"/>
 
-        <activity android:name=".xmljsondemo.XmlJsonActivity" />
-        <activity android:name=".asyncdemo.AsyncActivity" />
-        <activity android:name=".eventdemo.EventActivity" />
-        <activity android:name=".vollydemo.VolleyActivity" />
-        <activity android:name=".fragmentdemo.FragmentDemoActivity" />
-        <activity android:name=".listazdemo.ListViewAZDemoctivity" />
-        <activity android:name=".viewpagerdemo.ViewpagerActivity" />
-        <activity android:name=".picassodemo.PicassoDemoActivity" />
-        <activity android:name=".bluetoothdemo.BluetoothDemoActivity" />
-        <activity android:name=".recyclerviewdemo.RecyclerViewDemoActivity" />
-        <activity android:name=".designdemo.DesignSuportDemoActivity" />
-        <activity android:name=".materialdesigndemo.MDDemoActivity" />
-        <activity android:name=".materialdesigndemo.TouchFeedbackActivity" />
-        <activity android:name=".materialdesigndemo.CircularRevealDemoActivity" />
-        <activity android:name=".windowlearn.WindowLearnActivity" />
-        <activity android:name=".jobschedulerdemo.JobschedulerActivity" />
+        <activity android:name=".xmljsondemo.XmlJsonActivity"/>
+        <activity android:name=".asyncdemo.AsyncActivity"/>
+        <activity android:name=".eventdemo.EventActivity"/>
+        <activity android:name=".vollydemo.VolleyActivity"/>
+        <activity android:name=".fragmentdemo.FragmentDemoActivity"/>
+        <activity android:name=".listazdemo.ListViewAZDemoctivity"/>
+        <activity android:name=".viewpagerdemo.ViewpagerActivity"/>
+        <activity android:name=".picassodemo.PicassoDemoActivity"/>
+        <activity android:name=".bluetoothdemo.BluetoothDemoActivity"/>
+        <activity android:name=".recyclerviewdemo.RecyclerViewDemoActivity"/>
+        <activity android:name=".designdemo.DesignSuportDemoActivity"/>
+        <activity android:name=".materialdesigndemo.MDDemoActivity"/>
+        <activity android:name=".materialdesigndemo.TouchFeedbackActivity"/>
+        <activity android:name=".materialdesigndemo.CircularRevealDemoActivity"/>
+        <activity android:name=".windowlearn.WindowLearnActivity"/>
+        <activity android:name=".jobschedulerdemo.JobschedulerActivity"/>
 
         <service
             android:name=".jobschedulerdemo.MyJobService"
             android:exported="true"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
 
-        <activity android:name=".datastoragedemo.DataStorageActivity" />
-        <activity android:name=".datastoragedemo.sharedpreferences.SharedPreferencesActivity" />
-        <activity android:name=".datastoragedemo.sqlitestorage.SqliteStorageActivity" />
-        <activity android:name=".datastoragedemo.networkstorage.NetWorkStorageActivity" />
-        <activity android:name=".datastoragedemo.internalstorage.InternalStorageActivity" />
-        <activity android:name=".datastoragedemo.externalstorage.ExternalStorageActivity" />
-        <activity android:name=".datastoragedemo.contentprovider.CententProviderStorageActivity" />
-        <activity android:name=".servicedemo.SeriveInteractiveActivity"></activity>
+        <activity android:name=".datastoragedemo.DataStorageActivity"/>
+        <activity android:name=".datastoragedemo.sharedpreferences.SharedPreferencesActivity"/>
+        <activity android:name=".datastoragedemo.sqlitestorage.SqliteStorageActivity"/>
+        <activity android:name=".datastoragedemo.networkstorage.NetWorkStorageActivity"/>
+        <activity android:name=".datastoragedemo.internalstorage.InternalStorageActivity"/>
+        <activity android:name=".datastoragedemo.externalstorage.ExternalStorageActivity"/>
+        <activity android:name=".datastoragedemo.contentprovider.CententProviderStorageActivity"/>
+        <activity android:name=".servicedemo.SeriveInteractiveActivity"/>
+        <activity android:name=".gildedemo.GlideDemoActivity">
+        </activity>
 
-        <!--IM-->
+        <!-- IM -->
         <activity android:name=".im.IMActivity"/>
-        <!--EMC-->
+        <!-- EMC -->
         <!-- 设置环信应用的AppKey -->
-        <meta-data android:name="EASEMOB_APPKEY"  android:value="xm#androidreview" />
-        <!-- 声明SDK所需的service SDK核心功能-->
-        <service android:name="com.hyphenate.chat.EMChatService" android:exported="true"/>
-        <service android:name="com.hyphenate.chat.EMJobService"
-                 android:permission="android.permission.BIND_JOB_SERVICE"
-                 android:exported="true"
-            />
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="xm#androidreview"/>
+        <!-- 声明SDK所需的service SDK核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true"/>
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
         <!-- 声明SDK所需的receiver -->
         <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
                 <data android:scheme="package"/>
             </intent-filter>
             <!-- 可选filter -->
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
-                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.intent.action.USER_PRESENT"/>
             </intent-filter>
         </receiver>
+
         <activity android:name=".im.emc.ui.LoginActivity"/>
         <activity android:name=".im.emc.ui.RegisterActivity"/>
         <activity
@@ -316,7 +324,13 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
-            android:windowSoftInputMode="adjustPan" />
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".gildedemo.GlideBaseTestActivity">
+        </activity>
+        <activity android:name=".qrcode.QRCodeActivity">
+        </activity>
+        <activity android:name=".qrcode.QRCodeCreateActivity">
+        </activity>
     </application>
 
 </manifest>

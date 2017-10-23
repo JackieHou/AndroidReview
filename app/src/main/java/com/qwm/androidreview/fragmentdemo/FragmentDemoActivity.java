@@ -1,6 +1,7 @@
 package com.qwm.androidreview.fragmentdemo;
 
 import android.app.Activity;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -30,11 +31,11 @@ public class FragmentDemoActivity extends BaseActivity {
     }
 
 
-
-
-
-
-
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        Log.i(TAG, "onRequestPermissionsResult: ---------------------");
+    }
 
     public void testBtn1(View view) {
         MyFragmentOne tf1 = new MyFragmentOne();

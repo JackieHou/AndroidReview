@@ -1,6 +1,7 @@
 package com.qwm.androidreview;
 
 import android.app.Application;
+import android.support.multidex.MultiDexApplication;
 
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
@@ -8,7 +9,7 @@ import com.hyphenate.chat.EMOptions;
 /**
  * Created by wiming on 2016/4/27.
  */
-public class MyApplication extends Application {
+public class MyApplication extends MultiDexApplication {
     private static MyApplication mInstance;
     @Override
     public void onCreate() {

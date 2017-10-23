@@ -18,6 +18,7 @@ import com.qwm.androidreview.bluetoothdemo.BluetoothDemoActivity;
 import com.qwm.androidreview.eventdemo.EventActivity;
 import com.qwm.androidreview.filestoragedemo.FileStorageActivity;
 import com.qwm.androidreview.fragmentdemo.FragmentDemoActivity;
+import com.qwm.androidreview.gildedemo.GlideDemoActivity;
 import com.qwm.androidreview.im.IMActivity;
 import com.qwm.androidreview.jobschedulerdemo.JobschedulerActivity;
 import com.qwm.androidreview.listazdemo.ListViewAZDemoctivity;
@@ -27,6 +28,7 @@ import com.qwm.androidreview.picassodemo.PicassoDemoActivity;
 import com.qwm.androidreview.pictureoomdemo.PictureOOMActivity;
 import com.qwm.androidreview.providerdemo.ProviderActivity;
 import com.qwm.androidreview.providerdemo.ProviderDemoActivity;
+import com.qwm.androidreview.qrcode.QRCodeActivity;
 import com.qwm.androidreview.receiverdemo.ReceiverActivity;
 import com.qwm.androidreview.screendemo.ScreenActivity;
 import com.qwm.androidreview.servicedemo.ServiceActivity;
@@ -78,12 +80,14 @@ public class MainActivity extends BaseActivity {
         itemList.add("ListView A-Z");
         itemList.add("Viewpager");
         itemList.add("Picasso测试");
+        itemList.add("Glide测试");
         itemList.add("Bluetooth测试");
         itemList.add("Design Support Library测试");
         itemList.add("Material Design");
         itemList.add("Window学习");
         itemList.add("Jobscheduler学习");
         itemList.add("IM");
+        itemList.add("二维码");
         contentMgv.setAdapter(new MyGridAdapter(this, itemList));
         contentMgv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -129,6 +133,8 @@ public class MainActivity extends BaseActivity {
                     startActivity(itemStr,ViewpagerActivity.class);
                 }else if ("Picasso测试".equals(itemStr)) {
                     startActivity(itemStr,PicassoDemoActivity.class);
+                }else if ("Glide测试".equals(itemStr)) {
+                    startActivity(itemStr,GlideDemoActivity.class);
                 }else if ("Bluetooth测试".equals(itemStr)) {
                     startActivity(itemStr,BluetoothDemoActivity.class);
                 }else if ("Design Support Library测试".equals(itemStr)) {
@@ -141,6 +147,8 @@ public class MainActivity extends BaseActivity {
                     startActivity(itemStr,JobschedulerActivity.class);
                 }else if ("IM".equals(itemStr)) {
                     startActivity(itemStr,IMActivity.class);
+                }else if ("二维码".equals(itemStr)) {
+                    startActivity(itemStr,QRCodeActivity.class);
                 }
             }
         });

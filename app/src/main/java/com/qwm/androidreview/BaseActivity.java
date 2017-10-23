@@ -93,6 +93,7 @@ public class BaseActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(final int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode,permissions,grantResults);
         final PermissionListener permissionListener = mPermissionListenerMap.get(requestCode);;
         if(permissionListener==null)
             return;
@@ -152,7 +153,6 @@ public class BaseActivity extends AppCompatActivity {
                      }
                  })
                  .show();
-
     }
 
     //==================================================================================================================
