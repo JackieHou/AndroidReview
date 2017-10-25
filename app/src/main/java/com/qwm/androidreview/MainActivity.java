@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.AdapterView;
 
 import com.qwm.androidreview.animodemo.AnimoActivity;
@@ -23,6 +24,7 @@ import com.qwm.androidreview.im.IMActivity;
 import com.qwm.androidreview.jobschedulerdemo.JobschedulerActivity;
 import com.qwm.androidreview.listazdemo.ListViewAZDemoctivity;
 import com.qwm.androidreview.listviewdemo.ListViewActivity;
+import com.qwm.androidreview.markdown.MarkDownActivity;
 import com.qwm.androidreview.materialdesigndemo.MDDemoActivity;
 import com.qwm.androidreview.picassodemo.PicassoDemoActivity;
 import com.qwm.androidreview.pictureoomdemo.PictureOOMActivity;
@@ -38,6 +40,7 @@ import com.qwm.androidreview.view.MyGridView;
 import com.qwm.androidreview.viewdemo.ViewActivity;
 import com.qwm.androidreview.viewpagerdemo.ViewpagerActivity;
 import com.qwm.androidreview.vollydemo.VolleyActivity;
+import com.qwm.androidreview.webview.ShowMarkDownWebView;
 import com.qwm.androidreview.windowlearn.WindowLearnActivity;
 import com.qwm.androidreview.xmljsondemo.XmlJsonActivity;
 
@@ -88,6 +91,8 @@ public class MainActivity extends BaseActivity {
         itemList.add("Jobscheduler学习");
         itemList.add("IM");
         itemList.add("二维码");
+        itemList.add("Markdown");
+        itemList.add("WebView");
         contentMgv.setAdapter(new MyGridAdapter(this, itemList));
         contentMgv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -149,6 +154,10 @@ public class MainActivity extends BaseActivity {
                     startActivity(itemStr,IMActivity.class);
                 }else if ("二维码".equals(itemStr)) {
                     startActivity(itemStr,QRCodeActivity.class);
+                }else if ("Markdown".equals(itemStr)) {
+                    startActivity(itemStr,MarkDownActivity.class);
+                }else if ("WebView".equals(itemStr)) {
+                    startActivity(itemStr,ShowMarkDownWebView.class);
                 }
             }
         });

@@ -285,8 +285,9 @@
         <activity android:name=".datastoragedemo.externalstorage.ExternalStorageActivity"/>
         <activity android:name=".datastoragedemo.contentprovider.CententProviderStorageActivity"/>
         <activity android:name=".servicedemo.SeriveInteractiveActivity"/>
-        <activity android:name=".gildedemo.GlideDemoActivity">
-        </activity>
+        <activity android:name=".gildedemo.GlideDemoActivity"/>
+        <activity android:name=".markdown.MarkDownActivity"/>
+        <activity android:name=".webview.ShowMarkDownWebView"/>
 
         <!-- IM -->
         <activity android:name=".im.IMActivity"/>
