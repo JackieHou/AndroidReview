@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.PointF;
 import android.view.Gravity;
 import android.view.View.MeasureSpec;
@@ -18,8 +19,11 @@ import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
+import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
+import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.Map;
 
 /**
  *
@@ -29,43 +33,65 @@ public class ZXingUtils {
     /**
      * 生成二维码 要转换的地址或字符串,可以是中文
      *
-     * @param url
-     * @param width
-     * @param height
+     * @param content
+     * @param widthPix
+     * @param heightPix
      * @return
      */
-    public static Bitmap createQRImage(String url, final int width, final int height) {
+    public static Bitmap createQRImage(String content, int widthPix, int heightPix) {
         try {
-            // 判断URL合法性
-            if (url == null || "".equals(url) || url.length() < 1) {
+            if (content == null || "".equals(content)) {
                 return null;
             }
-            Hashtable<EncodeHintType, String> hints = new Hashtable<EncodeHintType, String>();
+            // 配置参数
+            Map<EncodeHintType, Object> hints = new HashMap<>();
             hints.put(EncodeHintType.CHARACTER_SET, "utf-8");
+            // 容错级别
+            hints.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);
             // 图像数据转换，使用了矩阵转换
-            BitMatrix bitMatrix = new QRCodeWriter().encode(url,
-                    BarcodeFormat.QR_CODE, width, height, hints);
-            int[] pixels = new int[width * height];
+            BitMatrix bitMatrix = new QRCodeWriter().encode(content, BarcodeFormat.QR_CODE, widthPix,
+                    heightPix, hints);
+            int[] pixels = new int[widthPix * heightPix];
             // 下面这里按照二维码的算法，逐个生成二维码的图片，
             // 两个for循环是图片横列扫描的结果
-            for (int y = 0; y < height; y++) {
-                for (int x = 0; x < width; x++) {
+            int[] colors = {Color.MAGENTA,Color.BLACK,Color.BLUE,Color.CYAN,Color.YELLOW};
+            for (int y = 0; y < heightPix; y++) {
+                int color = colors[ y%colors.length ];
+                for (int x = 0; x < widthPix; x++) {
                     if (bitMatrix.get(x, y)) {
-                        pixels[y * width + x] = 0xff000000;
+                        pixels[y * widthPix + x] = color;
                     } else {
-                        pixels[y * width + x] = 0xffffffff;
+                        pixels[y * widthPix + x] = 0xffffffff;
                     }
                 }
             }
             // 生成二维码图片的格式，使用ARGB_8888
-            Bitmap bitmap = Bitmap.createBitmap(width, height,
-                    Bitmap.Config.ARGB_8888);
-            bitmap.setPixels(pixels, 0, width, 0, 0, width, height);
+            Bitmap bitmap = Bitmap.createBitmap(widthPix, heightPix, Bitmap.Config.ARGB_8888);
+            bitmap.setPixels(pixels, 0, widthPix, 0, 0, widthPix, heightPix);
+            //必须使用compress方法将bitmap保存到文件中再进行读取。直接返回的bitmap是没有任何压缩的，内存消耗巨大！
             return bitmap;
         } catch (WriterException e) {
             e.printStackTrace();
         }
         return null;
+    }
+
+    /**
+     * 生成带log的二维码
+     * @param url
+     * @param width
+     * @param height
+     * @param logoBmp
+     * @return
+     */
+    public static Bitmap createQRImage(String url , final int width, final int height,Bitmap logoBmp){
+        Bitmap bitmap = createQRImage(url,width,height);
+        if(bitmap==null)
+            return null;
+        if(logoBmp!=null){
+            bitmap = addLogo(bitmap,logoBmp);
+        }
+        return bitmap;
     }
 
     /**
@@ -208,6 +234,53 @@ public class ZXingUtils {
         cv.restore();
 
         return newBitmap;
+    }
+
+
+    /**
+     * 在二维码中间添加Logo图案
+     */
+    private static Bitmap addLogo(Bitmap src, Bitmap logo) {
+        if (src == null) {
+            return null;
+        }
+        if (logo == null) {
+            return src;
+        }
+        //获取图片的宽高
+        int srcWidth = src.getWidth();
+        int srcHeight = src.getHeight();
+        int logoWidth = logo.getWidth();
+        int logoHeight = logo.getHeight();
+        if (srcWidth == 0 || srcHeight == 0) {
+            return null;
+        }
+        if (logoWidth == 0 || logoHeight == 0) {
+            return src;
+        }
+        //logo大小为二维码整体大小的1/5
+        float scaleFactor = srcWidth * 1.0f / 6 / logoWidth;
+        //底色宽度为 1/5
+        int logoBgWidth = srcWidth / 5;
+        Bitmap bitmap = Bitmap.createBitmap(srcWidth, srcHeight, Bitmap.Config.ARGB_8888);
+        try {
+            Canvas canvas = new Canvas(bitmap);
+            canvas.drawBitmap(src, 0, 0, null);
+            //底色绘制
+            Paint paint = new Paint();
+            paint.setStyle(Paint.Style.FILL);
+            paint.setColor(Color.BLUE);
+            canvas.drawRect(logoBgWidth*2,logoBgWidth*2,logoBgWidth*3,logoBgWidth*3,paint);
+            //log绘制
+            canvas.scale(scaleFactor, scaleFactor, srcWidth / 2, srcHeight / 2);
+            canvas.drawBitmap(logo, (srcWidth - logoWidth) / 2, (srcHeight - logoHeight) / 2, null);
+            canvas.save(Canvas.ALL_SAVE_FLAG);
+            canvas.restore();
+        } catch (Exception e) {
+            bitmap = null;
+            e.getStackTrace();
+        }
+        return bitmap;
     }
 
 }

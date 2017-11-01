@@ -1,6 +1,7 @@
 package com.qwm.androidreview.qrcode;
 
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatEditText;
 import android.view.View;
@@ -28,7 +29,8 @@ public class QRCodeCreateActivity extends BaseActivity {
     }
 
     public void onCreateQRCode(View view) {
-        Bitmap bitmap = ZXingUtils.createQRImage(mQrcodeEdt.getText().toString(),mQrcodeIv.getWidth(),mQrcodeIv.getHeight());
+        Bitmap bitmap = ZXingUtils.createQRImage(mQrcodeEdt.getText().toString(),mQrcodeIv.getWidth(),mQrcodeIv.getHeight(), BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher));
+//        Bitmap bitmap = ZXingUtils.createQRImage(mQrcodeEdt.getText().toString(),mQrcodeIv.getWidth(),mQrcodeIv.getHeight());
         mQrcodeIv.setImageBitmap(bitmap);
     }
 }
