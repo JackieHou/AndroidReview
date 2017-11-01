@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>创建表格</title>
+
+    <!-- Bootstrap -->
+    <link href="../bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+ 
+ 
+    <button type="button" class="btn btn-danger" onclick="oncreatetable()">生成表格和计算</button>
+
+    <table class="table" id="contenttable"></table>
+    
+    <table id="mktable" class="table"></table>
+ 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+    
+    
+    <script>
+    	var baseUrl = "https://github.com/qiwenming/AndroidReview/blob/master/app/src/main/java/com/qwm/androidreview/";
+    	
+    	function oncreatetable(){
+    		var colums = 3;
+    		var table = $('#contenttable');
+    		var rowStart = '<tr>';
+    		var rowEnd = '</tr>';
+    		var rowStr = '';
+    		//markdown的字符
+    		var mkStr = '| ';
+    		var mktable = $('#mktable');
+    		
+    		table.empty();
+    		var data = getData();
+    		$.each(data, function(index,value) {
+    			//三个我们就创建一行
+    			rowStr += getTdStr(value);
+    			mkStr += "<td>" + getMkValueStr(value);
+    			if(index==data.length-1){
+    				rowStr += rowEnd;
+    				table.append(rowStr);
+    				mkStr += '<tr>';
+    				mktable.append(mkStr);
+    				if(index==colums-1){
+    					mktable.append(getMkStr1(colums));
+    				}
+    			}else if(index%colums==0){
+    				rowStr = rowStart+getTdStr(value);
+    				mkStr = '<tr> <td> | ' + getMkValueStr(value);
+    			}else if(index%colums==(colums-1)){//这一行的最后一个数据,可以添加到表格中了
+    				rowStr += rowEnd;
+    				table.append(rowStr);
+    				mkStr += '<tr>';
+    				mktable.append(mkStr);
+    				if(index==colums-1){
+    					mktable.append(getMkStr1(colums));
+    				}
+    			}
+    		});
+    	}
+    	
+    	function getTdStr(value){
+    		return '<td> <a href="'+value.readmeurl+'">'+value.text+'</a> </td>';
+    	}
+    	
+    	function getMkStr1(colums){
+    		var str = '<tr> ';
+    		for (var i = 0; i < colums; i++) {
+    			if(i==0){
+    				str+='<td>|---|</td>';
+    			}else{
+    				str+='<td>---|</td>';
+    			}
+    		}
+    		return str+'</tr>';
+    	}
+    	
+    	function getMkValueStr(value){
+    		return '['+value.text+']('+value.readmeurl+') |</td>';
+    	}
+    	
+    	function getData(){
+    		var datas = [
+    		  { 'text':'Activity测试' ,  'readmeurl':baseUrl+'activitydemo/README.MD' },
+    		  { 'text':'广播接受者测试' , 'readmeurl':baseUrl+'receiverdemo/README.MD' },
+    		  { 'text':'内容提供者测试' , 'readmeurl':baseUrl+'providerdemo/README.MD' },
+    		  { 'text':'Service测试' , 'readmeurl':baseUrl+'servicedemo/README.MD' },
+    		  { 'text':'Service和Activity' , 'readmeurl':baseUrl+'activityservicedemo/README.MD' },
+    		  { 'text':'ListView测试' , 'readmeurl':baseUrl+'listviewdemo/README.MD' },
+    		  { 'text':'图片OOM测试' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'动画测试' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'Shape测试' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'屏幕适配' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'view' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'数据存储' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'Xml和Json' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'异步测试' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'事件分发' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'Volley' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'Fragment' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'ListView A-Z' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'Viewpager' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'Picasso测试' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'Glide测试' , 'readmeurl':baseUrl+'gildedemo/README.MD' },
+    		  { 'text':'Bluetooth测试' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'Design Support Library测试' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'Material Design' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'Design Support Library测试' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'Window学习' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'IM' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'二维码' , 'readmeurl':baseUrl+'README.MD' },
+    		  { 'text':'Markdown' , 'readmeurl':baseUrl+'markdown/README.MD' },
+    		  { 'text':'WebView' , 'readmeurl':baseUrl+'webview/README.MD' }
+    		];
+    		
+    	   return datas;
+    	}
+    </script>
+    
+  </body>
+</html>
