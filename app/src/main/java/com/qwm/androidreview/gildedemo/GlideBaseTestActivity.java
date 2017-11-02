@@ -66,7 +66,8 @@ public class GlideBaseTestActivity extends BaseActivity {
      * @param view
      */
     public void onBaseTest(View view) {
-        Glide.with(this).load(picUrl).placeholder(R.mipmap.ic_launcher).into(mIv1);
+//        Glide.with(this).load(picUrl).placeholder(R.mipmap.ic_launcher).into(mIv1);
+        Glide.with(this).load(picUrl).into(mIv1);
     }
 
 
@@ -76,6 +77,7 @@ public class GlideBaseTestActivity extends BaseActivity {
       * @param view
       */
      public void onGifTest(View view) {
-         Glide.with(this).load(gifUrl).placeholder(R.mipmap.ic_launcher).into(mIv2);
+//         Glide.with(this).load(gifUrl)(R.mipmap.ic_launcher).into(mIv2);
+         Glide.with(this).load(gifUrl).into(mIv2);
      }
 }

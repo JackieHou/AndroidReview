@@ -48,6 +48,8 @@ public class GlideDemoActivity extends BaseActivity {
         contentMgv = (MyGridView) findViewById(R.id.mgv_content);
         itemList = new ArrayList<>();
         itemList.add("Glide基本测试");
+//        itemList.add("Glide变换测试");
+        itemList.add("Glide变换三方库");
         contentMgv.setAdapter(new MyGridAdapter(this, itemList));
         contentMgv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -55,8 +57,10 @@ public class GlideDemoActivity extends BaseActivity {
                 String itemStr = itemList.get(position);
                 if ("Glide基本测试".equals(itemStr)) {
                     startActivity(itemStr, GlideBaseTestActivity.class);
-                } else if ("----".equals(itemStr)) {
-
+                } else if ("Glide变换测试".equals(itemStr)) {
+                    startActivity(itemStr,GlideTransformActivity.class);
+                }else if ("Glide变换三方库".equals(itemStr)) {
+                    startActivity(itemStr,GlideTransformThridlibActivity.class);
                 }
             }
         });

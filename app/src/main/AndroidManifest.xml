@@ -286,6 +286,8 @@
         <activity android:name=".datastoragedemo.contentprovider.CententProviderStorageActivity"/>
         <activity android:name=".servicedemo.SeriveInteractiveActivity"/>
         <activity android:name=".gildedemo.GlideDemoActivity"/>
+        <activity android:name=".gildedemo.GlideTransformActivity"/>
+        <activity android:name=".gildedemo.GlideTransformThridlibActivity"/>
         <activity android:name=".markdown.MarkDownActivity"/>
         <activity android:name=".webview.ShowMarkDownWebView"/>
 
@@ -331,6 +333,8 @@
         <activity android:name=".qrcode.QRCodeActivity">
         </activity>
         <activity android:name=".qrcode.QRCodeCreateActivity">
+        </activity>
+        <activity android:name=".okhttpdemo.OkhttpDemoActivity">
         </activity>
     </application>
 

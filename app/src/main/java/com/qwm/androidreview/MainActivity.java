@@ -26,6 +26,7 @@ import com.qwm.androidreview.listazdemo.ListViewAZDemoctivity;
 import com.qwm.androidreview.listviewdemo.ListViewActivity;
 import com.qwm.androidreview.markdown.MarkDownActivity;
 import com.qwm.androidreview.materialdesigndemo.MDDemoActivity;
+import com.qwm.androidreview.okhttpdemo.OkhttpDemoActivity;
 import com.qwm.androidreview.picassodemo.PicassoDemoActivity;
 import com.qwm.androidreview.pictureoomdemo.PictureOOMActivity;
 import com.qwm.androidreview.providerdemo.ProviderActivity;
@@ -79,6 +80,7 @@ public class MainActivity extends BaseActivity {
         itemList.add("异步测试");
         itemList.add("事件分发");
         itemList.add("Volley");
+        itemList.add("Okhttp");
         itemList.add("Fragment");
         itemList.add("ListView A-Z");
         itemList.add("Viewpager");
@@ -130,6 +132,8 @@ public class MainActivity extends BaseActivity {
                     startActivity(itemStr,EventActivity.class);
                 }else if ("Volley".equals(itemStr)) {
                     startActivity(itemStr,VolleyActivity.class);
+                }else if ("Okhttp".equals(itemStr)) {
+                    startActivity(itemStr,OkhttpDemoActivity.class);
                 }else if ("Fragment".equals(itemStr)) {
                     startActivity(itemStr,FragmentDemoActivity.class);
                 }else if ("ListView A-Z".equals(itemStr)) {
