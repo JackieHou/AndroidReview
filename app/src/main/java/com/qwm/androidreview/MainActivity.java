@@ -33,6 +33,7 @@ import com.qwm.androidreview.providerdemo.ProviderActivity;
 import com.qwm.androidreview.providerdemo.ProviderDemoActivity;
 import com.qwm.androidreview.qrcode.QRCodeActivity;
 import com.qwm.androidreview.receiverdemo.ReceiverActivity;
+import com.qwm.androidreview.retrofitdemo.RetrofitDemoActivity;
 import com.qwm.androidreview.screendemo.ScreenActivity;
 import com.qwm.androidreview.servicedemo.ServiceActivity;
 import com.qwm.androidreview.servicedemo.ServiceDemoActivity;
@@ -81,6 +82,7 @@ public class MainActivity extends BaseActivity {
         itemList.add("事件分发");
         itemList.add("Volley");
         itemList.add("Okhttp");
+        itemList.add("Retrofit");
         itemList.add("Fragment");
         itemList.add("ListView A-Z");
         itemList.add("Viewpager");
@@ -134,6 +136,8 @@ public class MainActivity extends BaseActivity {
                     startActivity(itemStr,VolleyActivity.class);
                 }else if ("Okhttp".equals(itemStr)) {
                     startActivity(itemStr,OkhttpDemoActivity.class);
+                }else if ("Retrofit".equals(itemStr)) {
+                    startActivity(itemStr,RetrofitDemoActivity.class);
                 }else if ("Fragment".equals(itemStr)) {
                     startActivity(itemStr,FragmentDemoActivity.class);
                 }else if ("ListView A-Z".equals(itemStr)) {

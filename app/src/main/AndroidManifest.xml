@@ -336,6 +336,8 @@
         </activity>
         <activity android:name=".okhttpdemo.OkhttpDemoActivity">
         </activity>
+        <activity android:name=".retrofitdemo.RetrofitDemoActivity">
+        </activity>
     </application>
 
 </manifest>
